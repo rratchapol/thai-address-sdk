@@ -1,0 +1,18 @@
+[
+  {
+    "level": "province",
+    "code": 10,
+    "aliases": ["กรุงเทพ", "กรุงเทพฯ", "กทม", "กทม.", "Bangkok Metropolis"]
+  },
+  {
+    "level": "province",
+    "code": 14,
+    "aliases": ["อยุธยา", "กรุงเก่า", "Ayutthaya"]
+  },
+  {
+    "level": "province",
+    "code": 30,
+    "aliases": ["โคราช", "Korat"]
+  }
+]
+
