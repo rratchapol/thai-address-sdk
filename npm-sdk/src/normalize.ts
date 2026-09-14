@@ -85,8 +85,7 @@ function isClaimedByAncestor(
   return ancestors.some(
     (ancestor) =>
       ancestor.match.input === primary.match.input &&
-      ancestor.match.confidence > primary.match.confidence &&
-      ancestor.match.matchType !== "fuzzy",
+      ancestor.match.confidence > primary.match.confidence,
   );
 }
 

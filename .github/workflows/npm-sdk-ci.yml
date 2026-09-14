@@ -1,0 +1,42 @@
+name: npm SDK CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "npm-sdk/**"
+      - ".github/workflows/npm-sdk-ci.yml"
+  pull_request:
+    paths:
+      - "npm-sdk/**"
+      - ".github/workflows/npm-sdk-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: npm-sdk
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+          cache-dependency-path: npm-sdk/package-lock.json
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run example:dropdown
+      - run: npm run example:autocomplete
+      - run: npm run example:normalize
+      - run: npm pack --dry-run

@@ -6,6 +6,31 @@
 ข้อมูลและระบบค้นหาถูก bundle อยู่ใน package จึงไม่ต้องเรียก REST API, ไม่ต้องใช้ API
 key และไม่ส่งข้อความที่อยู่ของผู้ใช้ออกจาก application
 
+## Quick Start (1 นาที)
+
+```bash
+npm install thai-address-sdk
+```
+
+```ts
+import { getDistricts, normalizeAddress, search } from "thai-address-sdk";
+
+const [province] = search("อยูทยา", { levels: ["province"], limit: 1 });
+console.log(province?.province.provinceNameTh);
+// พระนครศรีอยุธยา
+
+const result = normalizeAddress("บางปะอิน อยูทยา");
+console.log(result.status, result.bestMatch?.formattedAddress);
+// matched อำเภอบางปะอิน จังหวัดพระนครศรีอยุธยา
+
+console.log(getDistricts({ provinceCode: 14 }).length);
+// จำนวนอำเภอในจังหวัดพระนครศรีอยุธยา
+```
+
+ถ้าต้องการลองโค้ดที่รันได้ทันทีใน repository ดู
+[ตัวอย่าง dropdown, autocomplete และ normalize](https://github.com/rratchapol/thai-address-sdk/tree/main/npm-sdk/examples)
+โดยรัน `npm ci`, `npm run build` แล้ว `npm run example:dropdown` จากโฟลเดอร์ `npm-sdk/`
+
 ## ความสามารถ
 
 - ข้อมูลครบ 77 จังหวัด พร้อมอำเภอ/เขตและตำบล/แขวง
@@ -30,7 +55,7 @@ Package นี้จัดการเฉพาะข้อมูลต่อไ
 
 ## การติดตั้ง
 
-เมื่อนำ package ขึ้น npm registry แล้ว:
+ติดตั้ง package ที่เผยแพร่บน npm:
 
 ```bash
 npm install thai-address-sdk

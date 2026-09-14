@@ -2,6 +2,27 @@
   "name": "thai-address-sdk",
   "version": "0.1.0",
   "description": "Offline Thailand province, district, and subdistrict search and normalization",
+  "keywords": [
+    "thai-address",
+    "thailand-address",
+    "thailand",
+    "province",
+    "district",
+    "subdistrict",
+    "postal-code",
+    "fuzzy-search",
+    "address-normalization",
+    "typescript"
+  ],
+  "homepage": "https://github.com/rratchapol/thai-address-sdk#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rratchapol/thai-address-sdk.git",
+    "directory": "npm-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/rratchapol/thai-address-sdk/issues"
+  },
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -25,9 +46,12 @@
   },
   "scripts": {
     "build": "tsup ./src/index.ts --format esm,cjs --dts --clean",
-    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.mjs\" \"*.{json,md}\"",
-    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.mjs\" \"*.{json,md}\"",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.mjs\" \"examples/**/*.mjs\" \"examples/*.md\" \"*.{json,md}\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.mjs\" \"examples/**/*.mjs\" \"examples/*.md\" \"*.{json,md}\"",
     "test": "npm run build && node --test tests/*.test.mjs",
+    "example:dropdown": "node examples/dropdown.mjs",
+    "example:autocomplete": "node examples/autocomplete.mjs",
+    "example:normalize": "node examples/normalize.mjs",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
