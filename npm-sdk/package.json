@@ -1,6 +1,6 @@
 {
   "name": "thai-address-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Offline Thailand province, district, and subdistrict search and normalization",
   "keywords": [
     "thai-address",
