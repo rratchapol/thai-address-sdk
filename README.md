@@ -1,6 +1,11 @@
 # Thai Address SDK — ค้นหาที่อยู่ไทยแบบ offline
 
-TypeScript/JavaScript library for Thai province, district, and subdistrict lookup, typo-tolerant search, and address formatting. **Runs locally without a REST API or API key.**
+[![npm version](https://img.shields.io/npm/v/thai-address-sdk)](https://www.npmjs.com/package/thai-address-sdk)
+[![npm downloads](https://img.shields.io/npm/dm/thai-address-sdk)](https://www.npmjs.com/package/thai-address-sdk)
+[![CI](https://github.com/rratchapol/thai-address-sdk/actions/workflows/npm-sdk-ci.yml/badge.svg)](https://github.com/rratchapol/thai-address-sdk/actions/workflows/npm-sdk-ci.yml)
+[![license](https://img.shields.io/npm/l/thai-address-sdk)](./LICENSE)
+
+Offline Thai address autocomplete and normalization library for TypeScript and JavaScript. Search provinces, districts, subdistricts, and postcodes; correct misspelled Thai place names; and build cascading address dropdowns. **Runs locally without a REST API or API key.**
 
 ติดตั้ง [แพ็กเกจบน npm](https://www.npmjs.com/package/thai-address-sdk):
 
@@ -25,6 +30,7 @@ normalizeAddress("บางปะอิน อยูทยา").bestMatch?.forma
 
 - [คู่มือ npm SDK ฉบับเต็ม](./npm-sdk/README.md) — API, options, ผลลัพธ์ และข้อจำกัด
 - [ตัวอย่างที่รันได้](./npm-sdk/examples/README.md) — dropdown, autocomplete, normalize
+- [React autocomplete](./npm-sdk/examples/react/ThaiAddressAutocomplete.tsx) · [React dropdown](./npm-sdk/examples/react/ThaiAddressDropdown.tsx) · [Next.js autocomplete](./npm-sdk/examples/nextjs/ThaiAddressAutocomplete.tsx)
 - [Source code และ tests](./npm-sdk/src) · [npm package](https://www.npmjs.com/package/thai-address-sdk)
 - [REST API](./rest-api/README.md) — วางแผนไว้ ยังไม่ได้เปิดให้ใช้งาน
 

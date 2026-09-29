@@ -1,7 +1,14 @@
-# thai-address-sdk
+# thai-address-sdk — Thai address autocomplete and normalization
 
-ไลบรารี TypeScript/JavaScript สำหรับค้นหา กรอง ตรวจคำสะกด และจัดรูปแบบข้อมูล
-จังหวัด อำเภอ/เขต และตำบล/แขวงของประเทศไทยแบบ offline
+[![npm version](https://img.shields.io/npm/v/thai-address-sdk)](https://www.npmjs.com/package/thai-address-sdk)
+[![npm downloads](https://img.shields.io/npm/dm/thai-address-sdk)](https://www.npmjs.com/package/thai-address-sdk)
+[![CI](https://github.com/rratchapol/thai-address-sdk/actions/workflows/npm-sdk-ci.yml/badge.svg)](https://github.com/rratchapol/thai-address-sdk/actions/workflows/npm-sdk-ci.yml)
+[![license](https://img.shields.io/npm/l/thai-address-sdk)](../LICENSE)
+
+Offline Thai address autocomplete, fuzzy search, typo correction, normalization, postcode lookup, and province–district–subdistrict dropdowns for TypeScript and JavaScript.
+
+ไลบรารีสำหรับค้นหา กรอง ตรวจคำสะกด และจัดรูปแบบข้อมูลจังหวัด อำเภอ/เขต
+ตำบล/แขวง และรหัสไปรษณีย์ของประเทศไทยแบบ offline
 
 ข้อมูลและระบบค้นหาถูก bundle อยู่ใน package จึงไม่ต้องเรียก REST API, ไม่ต้องใช้ API
 key และไม่ส่งข้อความที่อยู่ของผู้ใช้ออกจาก application
@@ -30,6 +37,12 @@ console.log(getDistricts({ provinceCode: 14 }).length);
 ถ้าต้องการลองโค้ดที่รันได้ทันทีใน repository ดู
 [ตัวอย่าง dropdown, autocomplete และ normalize](https://github.com/rratchapol/thai-address-sdk/tree/main/npm-sdk/examples)
 โดยรัน `npm ci`, `npm run build` แล้ว `npm run example:dropdown` จากโฟลเดอร์ `npm-sdk/`
+
+ตัวอย่างสำหรับ framework:
+
+- [React Thai address autocomplete](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/examples/react/ThaiAddressAutocomplete.tsx)
+- [React province–district–subdistrict dropdown](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/examples/react/ThaiAddressDropdown.tsx)
+- [Next.js Thai address autocomplete](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/examples/nextjs/ThaiAddressAutocomplete.tsx)
 
 ## ความสามารถ
 
@@ -354,7 +367,7 @@ if (!province) {
 }
 ```
 
-## ตัวอย่าง dependent dropdown
+## Province–district–subdistrict dropdown
 
 ```ts
 import { getDistricts, getProvinces, getSubdistricts } from "thai-address-sdk";
@@ -481,7 +494,7 @@ subdistrict.postalCode; // 5 หลัก เช่น 13160
 
 ควรใช้ code เป็น identifier และใช้ชื่อสำหรับแสดงผล เนื่องจากชื่อพื้นที่อาจซ้ำกันได้
 
-## ตัวอย่าง autocomplete ใน browser
+## Thai address autocomplete ใน browser
 
 ควร debounce การค้นหาเพื่อไม่ให้ fuzzy search ทำงานทุกครั้งที่ผู้ใช้กดปุ่ม:
 
@@ -508,6 +521,12 @@ searchInput.addEventListener("input", (event) => {
 const thaiAddress = await import("thai-address-sdk");
 const results = thaiAddress.search("เชียงใหม่");
 ```
+
+สำหรับ React และ Next.js ดูตัวอย่าง component ที่พร้อมนำไปปรับใช้:
+
+- [React autocomplete](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/examples/react/ThaiAddressAutocomplete.tsx)
+- [React dependent dropdown](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/examples/react/ThaiAddressDropdown.tsx)
+- [Next.js autocomplete พร้อม dynamic import](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/examples/nextjs/ThaiAddressAutocomplete.tsx)
 
 ## แนวทางจัดการ fuzzy result
 
