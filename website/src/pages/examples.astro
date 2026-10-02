@@ -1,0 +1,99 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import CodeBlock from "../components/CodeBlock.astro";
+import { ThaiAddressAutocomplete } from "../examples/ThaiAddressAutocomplete";
+import { ThaiAddressDropdown } from "../examples/ThaiAddressDropdown";
+import autocompleteSource from "../examples/ThaiAddressAutocomplete.tsx?raw";
+import dropdownSource from "../examples/ThaiAddressDropdown.tsx?raw";
+import nextSource from "../examples/NextAddressSearch.tsx?raw";
+const toc = [
+  { id: "autocomplete", label: "React autocomplete" },
+  { id: "dropdown", label: "React dropdown" },
+  { id: "nextjs", label: "Next.js" },
+  { id: "status", label: "จัดการสถานะผลลัพธ์" },
+];
+---
+
+<DocsLayout
+  title="ตัวอย่างใช้งาน"
+  description="ทดลองคอมโพเนนต์ แล้วคัดลอกโค้ดไปปรับให้เข้ากับฟอร์มในแอปของคุณ"
+  eyebrow="RECIPES FOR YOUR APP"
+  toc={toc}
+>
+  <p>
+    ตัวอย่างใช้ React และ TypeScript ก่อนใช้งานให้ติดตั้ง <code
+      >thai-address-sdk</code
+    > ในโปรเจกต์ที่มี React อยู่แล้ว ชื่อ class ในตัวอย่างใช้สำหรับตกแต่ง สามารถเปลี่ยนให้เข้ากับแอปของคุณได้
+  </p>
+  <section id="autocomplete">
+    <span class="recipe-label">REACT · LIVE EXAMPLE</span><h2>
+      Autocomplete ที่เลือกด้วยคีย์บอร์ดได้
+    </h2><p>
+      หน่วงการค้นหา 200 มิลลิวินาที โหลด SDK เมื่อเริ่มพิมพ์
+      และส่งข้อมูลที่เลือกกลับผ่าน <code>onSelect</code> รองรับปุ่มขึ้น/ลง, Enter
+      และ Escape
+    </p><div class="live-example">
+      <ThaiAddressAutocomplete client:load />
+    </div><CodeBlock
+      code={`import { ThaiAddressAutocomplete } from "./ThaiAddressAutocomplete";\n\n<ThaiAddressAutocomplete\n  onSelect={(address) => {\n    console.log(address.province.provinceCode);\n    console.log(address.formattedAddress);\n  }}\n/>;`}
+      lang="tsx"
+      label="การเรียกใช้"
+    /><details class="doc-details">
+      <summary>ดูและคัดลอกโค้ดคอมโพเนนต์ทั้งหมด</summary><CodeBlock
+        code={autocompleteSource}
+        lang="tsx"
+        label="ThaiAddressAutocomplete.tsx"
+      />
+    </details>
+  </section>
+  <section id="dropdown">
+    <span class="recipe-label">REACT · LIVE EXAMPLE</span><h2>
+      จังหวัด อำเภอ ตำบล ที่สัมพันธ์กัน
+    </h2><p>
+      ตัวอย่างนี้ล้างค่าระดับล่างเมื่อเปลี่ยนจังหวัดหรืออำเภอ
+      และอ่านรหัสไปรษณีย์จากตำบลที่เลือก เก็บ state ด้วยรหัสพื้นที่ที่เป็นตัวเลข
+    </p><div class="live-example">
+      <ThaiAddressDropdown client:load />
+    </div><details class="doc-details">
+      <summary>ดูและคัดลอกโค้ดคอมโพเนนต์ทั้งหมด</summary><CodeBlock
+        code={dropdownSource}
+        lang="tsx"
+        label="ThaiAddressDropdown.tsx"
+      />
+    </details><p class="small-note">
+      ตัวอย่าง dropdown import ข้อมูลโดยตรง หากฟอร์มอยู่ท้ายหน้าหรือเปิดใน
+      dialog สามารถโหลดคอมโพเนนต์นี้ภายหลังเพื่อลดงานตอนเปิดหน้าแรก
+    </p>
+  </section>
+  <section id="nextjs">
+    <span class="recipe-label">NEXT.JS · APP ROUTER</span><h2>
+      โหลด SDK เมื่อผู้ใช้เริ่มค้นหา
+    </h2><p>
+      ใส่ <code>"use client"</code> ในไฟล์คอมโพเนนต์ แล้วใช้ dynamic import ภายใน
+      event handler ตัวอย่างนี้มีสถานะกำลังค้นหาและข้อความเมื่อโหลดข้อมูลไม่สำเร็จ
+    </p><CodeBlock
+      code={`"use client";\n\n// ภายใน event handler ของ Client Component\nconst { search } = await import("thai-address-sdk");\nconst results = search("เชียงใหม่", { limit: 5 });`}
+      label="หัวใจของตัวอย่าง"
+    /><details class="doc-details">
+      <summary>ดูและคัดลอก Client Component ทั้งหมด</summary><CodeBlock
+        code={nextSource}
+        lang="tsx"
+        label="NextAddressSearch.tsx"
+      />
+    </details><p>
+      จากนั้น import <code>NextAddressSearch</code> ไปวางในหน้า App Router ได้ตามปกติ
+      การ <code>await</code> ใช้สำหรับโหลดโมดูล ส่วน <code>search()</code> ทำงานทันทีบนข้อมูลในแพ็กเกจ
+    </p>
+  </section>
+  <section id="status">
+    <h2>จัดการผลลัพธ์ก่อนนำไปบันทึก</h2><p>
+      เมื่อใช้ normalization ให้นำสถานะมาเลือกหน้าตาการตอบกลับ ฟังก์ชัน <code
+        >setMessage</code
+      > และ <code>setChoices</code> ในโค้ดด้านล่างเป็นตัวอย่าง callback ของ UI ที่แอปต้องกำหนดเอง
+    </p><CodeBlock
+      code={`import { normalizeAddress } from "thai-address-sdk";\nimport type { AddressHierarchy } from "thai-address-sdk";\n\nfunction reviewAddress(\n  input: string,\n  setMessage: (message: string) => void,\n  setChoices: (choices: AddressHierarchy[]) => void,\n) {\n  const result = normalizeAddress(input);\n  setChoices([]);\n\n  switch (result.status) {\n    case "matched":\n      setMessage("ตรวจสอบที่อยู่ก่อนยืนยัน");\n      if (result.bestMatch) setChoices([result.bestMatch]);\n      break;\n    case "ambiguous":\n      setMessage("กรุณาเลือกพื้นที่ที่ต้องการ");\n      setChoices(result.bestMatch\n        ? [result.bestMatch, ...result.alternatives]\n        : result.alternatives);\n      break;\n    case "partial":\n      setMessage("เพิ่มชื่ออำเภอหรือจังหวัดให้ครบขึ้น");\n      break;\n    case "not_found":\n      setMessage("ไม่พบพื้นที่ ลองตรวจสอบข้อความอีกครั้ง");\n  }\n}`}
+    /><a class="inline-link" href="/api/#normalize"
+      >อ่านรายละเอียด NormalizeResult</a
+    >
+  </section>
+</DocsLayout>

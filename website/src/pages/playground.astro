@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Playground from "../components/Playground";
+---
+
+<Layout
+  title="Playground"
+  description="ทดลองค้นหา จัดรูปแบบ และเลือกจังหวัด อำเภอ ตำบล ด้วย Thai Address SDK พร้อมดูโค้ดและ JSON จริง"
+>
+  <div class="container playground-page">
+    <div class="page-heading">
+      <div>
+        <p class="eyebrow">TRY IT IN YOUR BROWSER</p><h1>
+          ที่อยู่แบบไหน ก็ลองได้ที่นี่
+        </h1><p>ทดลองกับข้อมูลจริง แล้วนำโค้ดไปใช้ในแอปของคุณ</p>
+      </div><span class="version-label">thai-address-sdk <b>v0.1.2</b></span>
+    </div><Playground client:load /><p class="playground-footnote">
+      ข้อมูลครอบคลุมหน่วยการปกครองและรหัสไปรษณีย์ ไม่รวมบ้านเลขที่ ถนน ซอย
+      หรือพิกัด <a href="/api/#limitations">อ่านขอบเขตการใช้งาน</a>
+    </p>
+  </div>
+</Layout>

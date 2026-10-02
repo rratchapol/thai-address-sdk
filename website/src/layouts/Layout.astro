@@ -1,0 +1,143 @@
+---
+import "@fontsource/ibm-plex-sans-thai/400.css";
+import "@fontsource/ibm-plex-sans-thai/500.css";
+import "@fontsource/ibm-plex-sans-thai/600.css";
+import "../styles/global.css";
+import Icon from "../components/Icon.astro";
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title,
+  description = "ค้นหาที่อยู่ไทย แก้คำสะกด และสร้าง dropdown จังหวัด อำเภอ ตำบล ด้วย Thai Address SDK สำหรับ JavaScript และ TypeScript",
+} = Astro.props;
+const pathname = Astro.url.pathname;
+const navigation = [
+  { href: "/getting-started/", label: "เริ่มใช้งาน" },
+  { href: "/playground/", label: "Playground" },
+  { href: "/examples/", label: "ตัวอย่าง" },
+  { href: "/api/", label: "API Reference" },
+];
+---
+
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#254ee5" />
+    <meta
+      property="og:title"
+      content={title
+        ? `${title} · Thai Address SDK`
+        : "Thai Address SDK · ที่อยู่ไทยในไม่กี่บรรทัด"}
+    />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="th_TH" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>
+      {
+        title
+          ? `${title} · Thai Address SDK`
+          : "Thai Address SDK · ที่อยู่ไทยในไม่กี่บรรทัด"
+      }
+    </title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="/" aria-label="Thai Address SDK หน้าแรก"
+          ><span class="brand-mark">[th]</span><span
+            >thai address<span class="brand-sdk">SDK</span></span
+          ></a
+        >
+        <nav class="desktop-nav" aria-label="เมนูหลัก">
+          {
+            navigation.map(({ href, label }) => (
+              <a
+                href={href}
+                aria-current={pathname === href ? "page" : undefined}
+              >
+                {label}
+              </a>
+            ))
+          }
+        </nav>
+        <a
+          class="github-link"
+          href="https://github.com/rratchapol/thai-address-sdk"
+          target="_blank"
+          rel="noreferrer"
+          ><Icon name="github" size={19} /><span>GitHub</span></a
+        >
+        <details class="mobile-menu">
+          <summary aria-label="เปิดเมนู"
+            >เมนู <span aria-hidden="true">☰</span></summary
+          ><nav aria-label="เมนูมือถือ">
+            {
+              navigation.map(({ href, label }) => (
+                <a
+                  href={href}
+                  aria-current={pathname === href ? "page" : undefined}
+                >
+                  {label}
+                </a>
+              ))
+            }
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="/"
+          ><span class="brand-mark small">[th]</span><span>thai address</span
+          ></a
+        ><p>สร้างฟอร์มที่อยู่ไทย ให้เป็นเรื่องง่าย</p><div>
+          <a
+            href="https://www.npmjs.com/package/thai-address-sdk"
+            target="_blank"
+            rel="noreferrer">npm</a
+          ><a
+            href="https://github.com/rratchapol/thai-address-sdk/issues"
+            target="_blank"
+            rel="noreferrer">แจ้งปัญหา</a
+          ><a href="/api/#data">ข้อมูล & License</a>
+        </div><span class="footer-license">MIT License</span>
+      </div>
+    </footer>
+    <div
+      id="copy-feedback"
+      class="copy-feedback"
+      role="status"
+      aria-live="polite"
+    >
+    </div>
+    <script>
+      document.addEventListener("click", async (event) => {
+        const target =
+          event.target instanceof Element
+            ? event.target.closest<HTMLButtonElement>("button[data-copy]")
+            : null;
+        if (!target?.dataset.copy) return;
+        const feedback = document.getElementById("copy-feedback");
+        try {
+          await navigator.clipboard.writeText(target.dataset.copy);
+          if (feedback) feedback.textContent = "คัดลอกโค้ดแล้ว";
+        } catch {
+          if (feedback)
+            feedback.textContent =
+              "คัดลอกอัตโนมัติไม่ได้ กรุณาเลือกและคัดลอกโค้ดด้วยตนเอง";
+        }
+        window.setTimeout(() => {
+          if (feedback) feedback.textContent = "";
+        }, 3500);
+      });
+    </script>
+  </body>
+</html>

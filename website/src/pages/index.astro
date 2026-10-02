@@ -1,0 +1,138 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
+import CodeBlock from "../components/CodeBlock.astro";
+import SearchPreview from "../components/SearchPreview";
+const snippet = `import { search } from "thai-address-sdk";
+
+const [address] = search("อยูทยา", {
+  levels: ["province"],
+  limit: 1,
+});
+
+console.log(address?.province.provinceNameTh);
+// "พระนครศรีอยุธยา"`;
+---
+
+<Layout>
+  <section class="hero container">
+    <div class="hero-copy">
+      <div class="release-tag">
+        <span>v0.1.2</span> Open source · TypeScript
+      </div><h1>
+        ที่อยู่ไทย<br /><span>จัดการได้</span><br />ในไม่กี่บรรทัด.
+      </h1><p class="hero-description">
+        ค้นหา แก้คำสะกด และจัดรูปแบบที่อยู่ไทย<br class="desktop-break" /> พร้อมใช้ในแอปของคุณ
+        ไม่ต้องมี API key
+      </p><div class="hero-actions">
+        <a class="button primary" href="/getting-started/"
+          ><Icon name="code" />เริ่มใช้งาน</a
+        ><a class="button secondary" href="/playground/">ลอง Playground</a>
+      </div><button
+        class="install-command"
+        type="button"
+        data-copy="npm install thai-address-sdk"
+        aria-label="คัดลอกคำสั่งติดตั้ง"
+        ><span class="prompt">$</span><code>npm install thai-address-sdk</code
+        ><Icon name="copy" size={16} /></button
+      ><p class="hero-note">
+        JavaScript & TypeScript <span>·</span> Node.js & Browser
+      </p>
+    </div>
+    <div class="hero-demo-wrap">
+      <div class="demo-caption">
+        <span class="caption-line"></span>จากคำที่พิมพ์ สู่ที่อยู่ที่ใช่
+      </div><SearchPreview client:load /><div class="demo-under-note">
+        <Icon name="check" size={16} /> คำค้นอยู่ในแอปของคุณ ไม่มีคำขอไปยัง API
+      </div>
+    </div>
+  </section>
+  <div class="facts-strip">
+    <div class="container facts-inner">
+      <div><strong>77</strong><span>จังหวัดทั่วประเทศไทย</span></div><div>
+        <strong>TH / EN</strong><span>ค้นหาได้สองภาษา</span>
+      </div><div>
+        <strong>Offline</strong><span>ข้อมูลพร้อมอยู่ในแพ็กเกจ</span>
+      </div><div><strong>MIT</strong><span>ใช้และต่อยอดได้</span></div>
+    </div>
+  </div>
+  <section class="container section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">BUILT FOR YOUR ADDRESS FORM</p><h2>
+          เรื่องที่อยู่ ให้ไลบรารีช่วย
+        </h2>
+      </div><p>จากช่องค้นหาเล็ก ๆ<br />ถึงฟอร์มที่อยู่ครบชุด</p>
+    </div><div class="feature-grid">
+      <article class="feature">
+        <div class="feature-icon"><Icon name="search" size={24} /></div><h3>
+          พิมพ์ใกล้เคียง ก็หาเจอ
+        </h3><p>
+          ค้นหาชื่อไทย อังกฤษ และชื่อเรียกทั่วไป พร้อม fuzzy search
+          ช่วยหาคำสะกดใกล้เคียง
+        </p><a href="/playground/?mode=search">ลองค้นหาที่อยู่</a>
+      </article><article class="feature">
+        <div class="feature-icon"><Icon name="layers" size={24} /></div><h3>
+          เลือกต่อกันได้ครบทุกระดับ
+        </h3><p>
+          เชื่อมจังหวัด อำเภอ และตำบลให้สัมพันธ์กัน
+          แล้วดึงรหัสไปรษณีย์จากตำบลที่เลือก
+        </p><a href="/playground/?mode=dropdown">ลองเลือกพื้นที่</a>
+      </article><article class="feature">
+        <div class="feature-icon"><Icon name="code" size={24} /></div><h3>
+          ข้อความเดียว เป็นข้อมูลพร้อมใช้
+        </h3><p>
+          วิเคราะห์ชื่อพื้นที่หลายส่วน แสดงคำที่แก้ และจัดรูปแบบเป็นไทยเต็ม
+          ไทยย่อ หรืออังกฤษ
+        </p><a href="/playground/?mode=normalize">ลองจัดรูปแบบ</a>
+      </article>
+    </div>
+  </section>
+  <section class="code-section">
+    <div class="container code-feature">
+      <div>
+        <p class="eyebrow">SMALL API. USEFUL RESULTS.</p><h2>
+          เริ่มจากหนึ่ง import<br />แล้วลองได้เลย
+        </h2><p>
+          ฟังก์ชันทำงานแบบ synchronous<br />พร้อม TypeScript types
+          และข้อมูลในตัว
+        </p><a class="button secondary" href="/getting-started/"
+          >อ่านคู่มือเริ่มต้น</a
+        >
+      </div><CodeBlock code={snippet} label="your-app.ts" />
+    </div>
+  </section>
+  <section class="container section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">MAKE IT YOURS</p><h2>ต่อเข้ากับแอปที่คุณใช้</h2>
+      </div><a class="text-link" href="/examples/">ดูตัวอย่างทั้งหมด</a>
+    </div><div class="recipe-grid">
+      <a class="recipe" href="/examples/#autocomplete"
+        ><span class="recipe-label">REACT</span><h3>
+          ช่องค้นหา Autocomplete
+        </h3><p>คำแนะนำขณะพิมพ์ พร้อมการเลือกด้วยคีย์บอร์ด</p><span class="mono"
+          >search(query)</span
+        ></a
+      ><a class="recipe" href="/examples/#dropdown"
+        ><span class="recipe-label">REACT</span><h3>
+          ฟอร์มจังหวัด–อำเภอ–ตำบล
+        </h3><p>ค่าที่สัมพันธ์กัน พร้อมรหัสไปรษณีย์</p><span class="mono"
+          >getSubdistricts(options)</span
+        ></a
+      ><a class="recipe" href="/examples/#nextjs"
+        ><span class="recipe-label">NEXT.JS</span><h3>
+          โหลดข้อมูลเมื่อพร้อมใช้
+        </h3><p>ตัวอย่าง Client Component และ dynamic import</p><span
+          class="mono">import("thai-address-sdk")</span
+        ></a
+      >
+    </div>
+  </section>
+  <section class="container closing-note">
+    <Icon name="book" size={24} /><p>
+      <strong>รู้ขอบเขตก่อนนำไปใช้</strong> SDK จัดการจังหวัด อำเภอ ตำบล และรหัสไปรษณีย์
+      ยังไม่แยกบ้านเลขที่ ถนน ซอย หรือพิกัด
+    </p><a href="/api/#limitations">อ่านข้อจำกัด</a>
+  </section>
+</Layout>

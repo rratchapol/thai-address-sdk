@@ -1,0 +1,47 @@
+---
+import Layout from "./Layout.astro";
+interface Props {
+  title: string;
+  description: string;
+  eyebrow: string;
+  toc: { id: string; label: string }[];
+}
+const { title, description, eyebrow, toc } = Astro.props;
+const pathname = Astro.url.pathname;
+---
+
+<Layout title={title} description={description}>
+  <div class="container docs-layout">
+    <aside class="docs-sidebar">
+      <p class="sidebar-label">DOCUMENTATION</p><nav aria-label="เอกสาร">
+        <a
+          href="/getting-started/"
+          aria-current={pathname === "/getting-started/" ? "page" : undefined}
+          >เริ่มใช้งาน</a
+        ><a
+          href="/examples/"
+          aria-current={pathname === "/examples/" ? "page" : undefined}
+          >ตัวอย่างใช้งาน</a
+        ><a
+          href="/api/"
+          aria-current={pathname === "/api/" ? "page" : undefined}
+          >API Reference</a
+        ><a href="/playground/">Playground</a>
+      </nav><p class="sidebar-label toc-label">ในหน้านี้</p><nav
+        class="toc"
+        aria-label="สารบัญหน้านี้"
+      >
+        {toc.map((item) => <a href={`#${item.id}`}>{item.label}</a>)}
+      </nav><div class="sidebar-version">
+        <span class="mono">v0.1.2</span><span
+          >เอกสารตรงกับเวอร์ชันที่ใช้ในเดโม</span
+        >
+      </div>
+    </aside>
+    <article class="docs-article">
+      <header class="docs-heading">
+        <p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{description}</p>
+      </header><slot />
+    </article>
+  </div>
+</Layout>

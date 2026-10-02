@@ -1,0 +1,241 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import CodeBlock from "../components/CodeBlock.astro";
+const toc = [
+  { id: "search", label: "search" },
+  { id: "normalize", label: "normalizeAddress" },
+  { id: "filters", label: "Filter & lookup" },
+  { id: "format", label: "formatAddress" },
+  { id: "types", label: "Types & text helpers" },
+  { id: "limitations", label: "ข้อจำกัด" },
+  { id: "data", label: "ข้อมูล & License" },
+];
+---
+
+<DocsLayout
+  title="API Reference"
+  description="ฟังก์ชัน ตัวเลือก และรูปแบบผลลัพธ์ของ thai-address-sdk v0.1.2"
+  eyebrow="THE REFERENCE"
+  toc={toc}
+>
+  <p>
+    ทุกฟังก์ชันเรียกใช้ได้โดยตรงจาก <code>thai-address-sdk</code> และทำงานแบบ synchronous
+    ข้อมูลรหัสจังหวัด อำเภอ ตำบล และรหัสไปรษณีย์เป็น <code>number</code>
+  </p>
+  <section id="search">
+    <h2><code>search(query, options?)</code></h2><p>
+      ค้นหาชื่อพื้นที่ด้วยภาษาไทย ภาษาอังกฤษ หรือ alias และคืน <code
+        >SearchResult[]</code
+      > ถ้าไม่พบจะคืน <code>[]</code>
+    </p><CodeBlock
+      code={`import { search } from "thai-address-sdk";\n\nconst results = search("อยูทยา", {\n  levels: ["province"],\n  limit: 5,\n  minScore: 0.72,\n  format: "full_th",\n});`}
+    /><div class="table-scroll">
+      <table>
+        <thead
+          ><tr><th>ตัวเลือก</th><th>ค่าเริ่มต้น</th><th>การใช้งาน</th></tr
+          ></thead
+        ><tbody
+          ><tr
+            ><td><code>levels</code></td><td>ทุกระดับ</td><td
+              >อาร์เรย์ของ <code>province</code>, <code>district</code>, <code
+                >subdistrict</code
+              ></td
+            ></tr
+          ><tr
+            ><td><code>limit</code></td><td><code>10</code></td><td
+              >จำนวนผลลัพธ์ สูงสุด 100</td
+            ></tr
+          ><tr
+            ><td><code>minScore</code></td><td><code>0.72</code></td><td
+              >คะแนนขั้นต่ำที่ยอมรับ</td
+            ></tr
+          ><tr
+            ><td><code>format</code></td><td><code>full_th</code></td><td
+              >รูปแบบของ <code>formattedAddress</code></td
+            ></tr
+          ></tbody
+        >
+      </table>
+    </div><h3>อ่านผลลัพธ์</h3><p>
+      แต่ละรายการมี <code>type</code>, <code>province</code>, <code
+        >formattedAddress</code
+      > และ <code>match</code> ส่วน <code>district</code>, <code
+        >subdistrict</code
+      > และ <code>postalCode</code> ขึ้นอยู่กับระดับพื้นที่ที่พบ
+    </p><CodeBlock
+      code={`const [result] = search("อยูทยา", { levels: ["province"] });\n\nif (result) {\n  console.log(result.formattedAddress);\n  console.log(result.match.matchType);\n  console.log(result.match.corrected);\n  console.log(result.match.confidence);\n}`}
+    /><p>
+      <code>matchType</code> มี <code>exact</code>, <code>alias</code>, <code
+        >prefix</code
+      >, <code>contains</code> และ <code>fuzzy</code> โดย <code>confidence</code
+      > อยู่ระหว่าง 0–1 เป็นคะแนนจัดอันดับภายใน SDK ไม่ใช่เปอร์เซ็นต์ความถูกต้อง
+    </p>
+  </section>
+  <section id="normalize">
+    <h2><code>normalizeAddress(input, options?)</code></h2><p>
+      วิเคราะห์ข้อความที่มีหลายส่วน
+      โดยใช้ความสัมพันธ์จังหวัด–อำเภอ–ตำบลช่วยเลือกคำตอบ คืนค่า <code
+        >NormalizeResult</code
+      >
+    </p><CodeBlock
+      code={`import { normalizeAddress } from "thai-address-sdk";\n\nconst result = normalizeAddress("ต สุเทพ อ เมือง จ เชียงใหม่", {\n  format: "short_th",\n  limit: 5,\n  minScore: 0.72,\n});\n\nconst candidates = result.bestMatch\n  ? [result.bestMatch, ...result.alternatives]\n  : [];`}
+    /><p>
+      ตัวเลือก <code>format</code> และ <code>minScore</code> มีค่าเริ่มต้นเหมือน <code
+        >search</code
+      > ส่วน <code>limit</code> คือจำนวน candidate ที่ใช้พิจารณา เริ่มต้น 5 และสูงสุด
+      20
+    </p><div class="table-scroll">
+      <table>
+        <thead
+          ><tr><th>สถานะ</th><th>ความหมาย</th><th>วิธีรับมือ</th></tr></thead
+        ><tbody
+          ><tr
+            ><td><code>matched</code></td><td
+              >มีคำตอบที่ผ่านเกณฑ์และไม่มีคู่แข่งคะแนนใกล้เคียง</td
+            ><td>แสดงผลให้ผู้ใช้ตรวจสอบ</td></tr
+          ><tr
+            ><td><code>partial</code></td><td
+              >พบข้อมูลบางส่วนแต่คะแนนยังไม่สูงพอ</td
+            ><td>ขอรายละเอียดเพิ่มเติม</td></tr
+          ><tr
+            ><td><code>ambiguous</code></td><td>มีหลายคำตอบที่คะแนนใกล้กัน</td
+            ><td>แสดงคำตอบทางเลือกให้เลือก</td></tr
+          ><tr
+            ><td><code>not_found</code></td><td>ไม่มีคำตอบที่ผ่านเกณฑ์</td><td
+              >แนะนำให้แก้ไขข้อความ</td
+            ></tr
+          ></tbody
+        >
+      </table>
+    </div><p>
+      ฟิลด์ผลลัพธ์ประกอบด้วย <code>input</code>, <code>normalizedInput</code>, <code
+        >status</code
+      >, <code>bestMatch</code>, <code>confidence</code>, <code
+        >alternatives</code
+      > และ <code>corrections</code> โดย <code>bestMatch</code> อาจเป็น <code
+        >null</code
+      >
+    </p><div class="notice">
+      <strong
+        ><code>smartSearch()</code> เป็น alias ของ <code
+          >normalizeAddress()</code
+        ></strong
+      ><p>เลือกใช้ชื่อใดชื่อหนึ่งได้ ทั้งคู่คืนผลลัพธ์รูปแบบเดียวกัน</p>
+    </div>
+  </section>
+  <section id="filters">
+    <h2>Filter & lookup</h2><p>
+      ดึงรายการหรือค้นหารายการเดียวด้วยรหัสพื้นที่ เหมาะกับฟอร์มที่มี dropdown
+      ต่อเนื่อง
+    </p><div class="table-scroll">
+      <table>
+        <thead><tr><th>ฟังก์ชัน</th><th>ผลลัพธ์</th></tr></thead><tbody
+          ><tr
+            ><td><code>getProvinces()</code></td><td
+              ><code>readonly Province[]</code></td
+            ></tr
+          ><tr
+            ><td><code>{"getDistricts({ provinceCode? })"}</code></td><td
+              ><code>District[]</code></td
+            ></tr
+          ><tr
+            ><td
+              ><code>{"getSubdistricts({ provinceCode?, districtCode? })"}</code
+              ></td
+            ><td><code>Subdistrict[]</code></td></tr
+          ><tr
+            ><td><code>getProvince(provinceCode)</code></td><td
+              ><code>Province | undefined</code></td
+            ></tr
+          ><tr
+            ><td><code>getDistrict(districtCode)</code></td><td
+              ><code>District | undefined</code></td
+            ></tr
+          ><tr
+            ><td><code>getSubdistrict(subdistrictCode)</code></td><td
+              ><code>Subdistrict | undefined</code></td
+            ></tr
+          ></tbody
+        >
+      </table>
+    </div><p>
+      <code>getDistricts()</code> และ <code>getSubdistricts()</code> เรียกโดยไม่ส่ง
+      options เพื่อดึงทุกรายการได้ หากส่งตัวกรองที่ไม่มีข้อมูลจะคืนอาร์เรย์ว่าง
+    </p><CodeBlock
+      code={`import { getSubdistricts, getProvince } from "thai-address-sdk";\n\nconst subdistricts = getSubdistricts({\n  provinceCode: 14,\n  districtCode: 1406,\n});\n\nconst province = getProvince(999);\n// undefined`}
+    /><p>
+      ค้นด้วยรหัสไปรษณีย์ได้โดยกรองชุดข้อมูลตำบล
+      ไม่ควรสมมติว่ารหัสไปรษณีย์หนึ่งค่ามีเพียงตำบลเดียว
+    </p><CodeBlock
+      code={`const matches = getSubdistricts().filter(\n  (item) => item.postalCode === 13160,\n);`}
+    />
+  </section>
+  <section id="format">
+    <h2><code>formatAddress(address, format?)</code></h2><p>
+      รับ object ที่มี <code>province</code> และมี <code>district</code> / <code
+        >subdistrict</code
+      > ตามต้องการ แล้วคืนข้อความที่อยู่ โดยไม่ต่อรหัสไปรษณีย์ให้อัตโนมัติ
+    </p><CodeBlock
+      code={`import { formatAddress, getProvince } from "thai-address-sdk";\n\nconst province = getProvince(14);\nif (province) {\n  formatAddress({ province }, "full_th"); // จังหวัดพระนครศรีอยุธยา\n  formatAddress({ province }, "short_th"); // จ.พระนครศรีอยุธยา\n  formatAddress({ province }, "plain_th"); // พระนครศรีอยุธยา\n  formatAddress({ province }, "en"); // Phra Nakhon Si Ayutthaya\n}`}
+    /><p>
+      กรุงเทพมหานครจะใช้คำนำหน้า “เขต” และ “แขวง” ตามพื้นที่ ส่วนจังหวัดอื่นใช้
+      “อำเภอ” และ “ตำบล”
+    </p>
+  </section>
+  <section id="types">
+    <h2>TypeScript types & text helpers</h2><CodeBlock
+      code={`import type {\n  Province, District, Subdistrict,\n  AddressHierarchy, AddressFormat, AddressLevel,\n  SearchOptions, SearchResult,\n  NormalizeOptions, NormalizeResult, NormalizeStatus,\n  FilterOptions, MatchMetadata, MatchType, Correction,\n} from "thai-address-sdk";`}
+    /><p>
+      <code>provinceCode</code> เป็นรหัส 2 หลัก, <code>districtCode</code> 4 หลัก
+      และ <code>subdistrictCode</code> 6 หลัก ทั้งหมดเป็นตัวเลข ใช้รหัสเหล่านี้แทนชื่อเป็น
+      key ของรายการ
+    </p><p>
+      มี text helpers สำหรับงานเฉพาะทาง ได้แก่ <code>normalizeText(text)</code>, <code
+        >stripAddressLabels(text)</code
+      > และ <code>damerauLevenshtein(a, b)</code> ดูรายละเอียดใน <a
+        href="https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/src/text.ts"
+        target="_blank"
+        rel="noreferrer">source code</a
+      >
+    </p>
+  </section>
+  <section id="limitations">
+    <h2>ขอบเขตและข้อจำกัด</h2><ul>
+      <li>
+        รองรับจังหวัด อำเภอ/เขต ตำบล/แขวง และรหัสไปรษณีย์ ยังไม่แยกบ้านเลขที่
+        อาคาร ถนน ซอย หรือพิกัด
+      </li><li>
+        Dataset เป็น snapshot ที่มากับแพ็กเกจ ไม่อัปเดตจากอินเทอร์เน็ตอัตโนมัติ
+      </li><li>
+        Alias ยังไม่ครอบคลุมชื่อเรียกท้องถิ่นทั้งหมด และ fuzzy search
+        อาจได้คำตอบที่ไม่ตรงกับเจตนา
+      </li><li>
+        ผลลัพธ์ที่แก้คำสะกดหรือมีหลายคำตอบควรให้ผู้ใช้ตรวจสอบก่อนบันทึก
+      </li><li>
+        SDK มีข้อมูลในตัวและประมวลผลแบบ synchronous ควรใช้ dynamic import และ
+        debounce สำหรับหน้าเว็บ โดยทดสอบกับอุปกรณ์เป้าหมาย
+      </li><li>REST API ยังอยู่ในแผนงาน เวอร์ชันนี้ใช้ SDK ที่ติดตั้งในแอป</li>
+    </ul>
+  </section>
+  <section id="data">
+    <h2>ข้อมูลและ License</h2><p>
+      SDK เผยแพร่ภายใต้ MIT License ชุดข้อมูลอ้างอิงจาก <a
+        href="https://github.com/thailand-geography-data/thailand-geography-json"
+        target="_blank"
+        rel="noreferrer">thailand-geography-json</a
+      > โดย Joe Takara ภายใต้ MIT เช่นกัน
+    </p><p>
+      Source commit ที่ระบุในแพ็กเกจ: <code class="break-code"
+        >b8b3fb91c7df1129ff5b43cb46f7fcffadd2156b</code
+      >
+    </p><p>
+      อ่าน <a href="/licenses.txt"
+        >ข้อความ License และ attribution ที่มากับเว็บไซต์</a
+      > หากพบข้อมูลคลาดเคลื่อนสามารถ <a
+        href="https://github.com/rratchapol/thai-address-sdk/issues"
+        target="_blank"
+        rel="noreferrer">แจ้งปัญหาบน GitHub</a
+      > พร้อมชื่อพื้นที่และตัวอย่างที่ค้นหา
+    </p>
+  </section>
+</DocsLayout>

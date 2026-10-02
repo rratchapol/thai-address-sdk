@@ -1,0 +1,23 @@
+---
+import { Code } from "astro:components";
+import Icon from "./Icon.astro";
+interface Props {
+  code: string;
+  lang?: "ts" | "tsx" | "js" | "bash" | "json";
+  label?: string;
+}
+const { code, lang = "ts", label = "TypeScript" } = Astro.props;
+---
+
+<div class="code-block">
+  <div class="code-toolbar">
+    <span>{label}</span><button
+      class="copy-code"
+      data-copy={code}
+      type="button"
+      aria-label={`คัดลอกโค้ด ${label}`}
+      ><Icon name="copy" size={15} /><span>คัดลอก</span></button
+    >
+  </div>
+  <Code code={code} lang={lang} theme="github-dark" wrap={false} />
+</div>
