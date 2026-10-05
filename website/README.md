@@ -2,6 +2,10 @@
 
 เว็บไซต์ภาษาไทยสำหรับ `thai-address-sdk` มีหน้าแนะนำ คู่มือเริ่มต้น Playground ตัวอย่าง React / Next.js และ API Reference
 
+[เปิดเว็บไซต์](https://www.thai-address-sdk.taotech.site/) · [Playground](https://www.thai-address-sdk.taotech.site/playground/) · [แพ็กเกจบน npm](https://www.npmjs.com/package/thai-address-sdk) · [คู่มือใช้ SDK ในแอป](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/README.md) · [Source code](https://github.com/rratchapol/thai-address-sdk)
+
+เว็บไซต์นี้เป็นเว็บประกอบไลบรารี หากต้องการใช้ SDK ในแอปของคุณ ให้ติดตั้ง `npm install thai-address-sdk` โดยไม่ต้องติดตั้งหรือรันเว็บไซต์นี้
+
 ## Run locally
 
 Use Node.js 22.12+ (Node.js 24 is recommended for this website). The SDK itself supports Node.js 18+.

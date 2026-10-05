@@ -5,6 +5,8 @@
 [![CI](https://github.com/rratchapol/thai-address-sdk/actions/workflows/npm-sdk-ci.yml/badge.svg)](https://github.com/rratchapol/thai-address-sdk/actions/workflows/npm-sdk-ci.yml)
 [![license](https://img.shields.io/npm/l/thai-address-sdk)](../LICENSE)
 
+**เว็บไซต์คู่มือและ Playground:** [www.thai-address-sdk.taotech.site](https://www.thai-address-sdk.taotech.site/) · [ทดลองใช้ Playground](https://www.thai-address-sdk.taotech.site/playground/)
+
 Offline Thai address autocomplete, fuzzy search, typo correction, normalization, postcode lookup, and province–district–subdistrict dropdowns for TypeScript and JavaScript.
 
 ไลบรารีสำหรับค้นหา กรอง ตรวจคำสะกด และจัดรูปแบบข้อมูลจังหวัด อำเภอ/เขต
@@ -43,6 +45,19 @@ console.log(getDistricts({ provinceCode: 14 }).length);
 - [React Thai address autocomplete](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/examples/react/ThaiAddressAutocomplete.tsx)
 - [React province–district–subdistrict dropdown](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/examples/react/ThaiAddressDropdown.tsx)
 - [Next.js Thai address autocomplete](https://github.com/rratchapol/thai-address-sdk/blob/main/npm-sdk/examples/nextjs/ThaiAddressAutocomplete.tsx)
+
+## เว็บไซต์คู่มือและ Playground
+
+SDK มี [เว็บไซต์ประกอบพร้อมคู่มือและ Playground](https://www.thai-address-sdk.taotech.site/)
+สำหรับทดลองค้นหา จัดรูปแบบที่อยู่ และเลือกจังหวัด → อำเภอ → ตำบล พร้อมดูโค้ดและผลลัพธ์ JSON จริง
+รวมคู่มือเริ่มต้น API Reference และตัวอย่าง React / Next.js ที่คัดลอกไปปรับใช้ได้
+
+- [เริ่มใช้งาน](https://www.thai-address-sdk.taotech.site/getting-started/) — ติดตั้งและเรียกฟังก์ชันแรก
+- [Playground](https://www.thai-address-sdk.taotech.site/playground/) — ทดลองกับข้อมูลจริงใน browser
+- [ตัวอย่าง React / Next.js](https://www.thai-address-sdk.taotech.site/examples/) — โค้ดสำหรับนำไปปรับใช้ในแอป
+- [API Reference](https://www.thai-address-sdk.taotech.site/api/) — ฟังก์ชัน options และผลลัพธ์
+
+เปิดเว็บเพื่อทดลองใช้ได้ทันที หากต้องการใช้ไลบรารีในแอปของคุณ ให้ติดตั้ง `thai-address-sdk` ตาม Quick Start ด้านบน
 
 ## ความสามารถ
 

@@ -28,7 +28,7 @@ normalizeAddress("บางปะอิน อยูทยา").bestMatch?.forma
 
 ## เริ่มใช้งานต่อ
 
-- [เว็บไซต์คู่มือและ Playground](./website/README.md) — รันเว็บด้วย `cd website`, `npm ci` และ `npm run dev`
+- [เว็บไซต์คู่มือและ Playground](https://www.thai-address-sdk.taotech.site/) — อ่านคู่มือและทดลองใช้ใน browser ได้ทันที
 - [คู่มือ npm SDK ฉบับเต็ม](./npm-sdk/README.md) — API, options, ผลลัพธ์ และข้อจำกัด
 - [ตัวอย่างที่รันได้](./npm-sdk/examples/README.md) — dropdown, autocomplete, normalize
 - [React autocomplete](./npm-sdk/examples/react/ThaiAddressAutocomplete.tsx) · [React dropdown](./npm-sdk/examples/react/ThaiAddressDropdown.tsx) · [Next.js autocomplete](./npm-sdk/examples/nextjs/ThaiAddressAutocomplete.tsx)
