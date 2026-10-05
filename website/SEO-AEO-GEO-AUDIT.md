@@ -61,21 +61,27 @@ robots.txt ที่หายและตอบ 404 **ไม่ได้บล�
 - npm audit หลังอัปเดต transitive build dependency http-cache-semantics: 0 vulnerabilities
 - Website CI ตรวจ formatting, types, build และ emitted SEO metadata ทุก push/PR ที่เกี่ยวข้อง
 
-## Lighthouse: เว็บจริงก่อนแก้
+## Lighthouse: เว็บจริงก่อนและหลังแก้
 
-วัด homepage จริงด้วย **Lighthouse 13.5.0**, mobile preset, simulated throttling, Chrome headless ในเครื่องนี้ ผลหนึ่งครั้งใช้ชี้จุดแก้ ไม่ใช่ข้อมูลจากผู้ใช้จริงหรือหลักฐานอันดับ Google
+วัด homepage จริงด้วย **Lighthouse 13.5.0**, mobile preset, simulated throttling, Chrome headless ในเครื่องนี้ ก่อนและหลังอย่างละหนึ่งครั้ง ใช้ชี้จุดแก้ ไม่ใช่ข้อมูลจากผู้ใช้จริงหรือหลักฐานอันดับ Google
 
-| ตัวชี้วัด           | ก่อนแก้ |
-| ------------------- | ------- |
-| Performance         | 90/100  |
-| Accessibility       | 89/100  |
-| Best practices      | 100/100 |
-| SEO checklist       | 100/100 |
-| LCP                 | 1.3s    |
-| CLS                 | 0.049   |
-| Total Blocking Time | 390ms   |
+| ตัวชี้วัด           | ก่อนแก้ | หลัง deploy |
+| ------------------- | ------- | ----------- |
+| Performance         | 90/100  | 99/100      |
+| Accessibility       | 89/100  | 100/100     |
+| Best practices      | 100/100 | 100/100     |
+| SEO checklist       | 100/100 | 100/100     |
+| LCP                 | 1.3s    | 1.6s        |
+| CLS                 | 0.049   | 0           |
+| Total Blocking Time | 390ms   | 0ms         |
 
 แม้ Lighthouse SEO ได้ 100 แต่ยังพบ canonical, sitemap และ schema ที่ขาดจากการตรวจด้วยมือ เพราะคะแนน Lighthouse ตรวจเพียงบางข้อ ไม่มีข้อมูล field INP หรือ CrUX ในการตรวจครั้งนี้
+
+ผล mobile หลังแก้วัดจาก production commit `851fc7e` ด้วย preset เดียวกัน สรุปผลอยู่ที่ `audits/2026-10-05/lighthouse-mobile-before.json` และ `lighthouse-mobile-after.json` การทดสอบครั้งเดียวอาจแปรผันตามเครือข่ายและเครื่อง LCP ทั้งสองครั้งต่ำกว่า 2.5s และ TBT ไม่ใช่ field INP
+
+ตรวจ production แล้ว: ทั้ง 6 หน้าและไฟล์ robots/sitemap/llms/llms-full ตอบ 200, MIME type ถูกต้อง, canonical/schema ถูกต้อง, slashless URL redirect 308 และ URL ที่ไม่มีอยู่ตอบ 404 พร้อม noindex Website CI และ Vercel deployment ของ commit นี้สำเร็จ
+
+การตรวจ FAQ บน desktop พบสี sidebar/footer จางและลิงก์ในย่อหน้าที่ต้องขีดเส้นใต้ จึงแก้เพิ่มใน shared styles และใช้ชื่อแบรนด์จากข้อความจริงของลิงก์ ผล local Lighthouse desktop ของ FAQ หลังแก้ได้ Accessibility 100/100 และ SEO 100/100 ไม่มี automated audit failure ที่เหลือ
 
 ## ขั้นตอนที่ต้องใช้บัญชีเจ้าของหรือหลักฐานจริง
 

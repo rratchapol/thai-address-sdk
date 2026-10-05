@@ -16,7 +16,7 @@
     500 0.75rem Consolas,
     monospace;
   letter-spacing: 0.09em;
-  color: #8a94a6;
+  color: var(--muted);
   margin-bottom: 16px;
 }
 .docs-sidebar nav {
@@ -986,7 +986,7 @@ td {
 .breadcrumbs li + li::before {
   content: "/";
   margin-right: 8px;
-  color: #8a94a6;
+  color: var(--muted);
 }
 .breadcrumbs a:hover {
   color: var(--blue);
@@ -1037,4 +1037,12 @@ td {
     max-height: calc(100dvh - 140px);
     overflow-y: auto;
   }
+}
+
+.docs-article p a,
+.reviewed-note a,
+.playground-guide p a,
+.footer-license a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

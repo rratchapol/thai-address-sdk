@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-05",
+  "scope": "One production mobile lab run; not field CWV or ranking measurements",
+  "measuredCommit": "851fc7e1e7f39b0f3c7ec60c56b13e09a049bc9e",
+  "lighthouseVersion": "13.5.0",
+  "url": "https://www.thai-address-sdk.taotech.site/",
+  "formFactor": "mobile",
+  "throttlingMethod": "simulate",
+  "categories": {
+    "performance": 0.99,
+    "accessibility": 1,
+    "best-practices": 1,
+    "seo": 1
+  },
+  "metrics": {
+    "first-contentful-paint": {
+      "numericValue": 1645.5045,
+      "displayValue": "1.6 s"
+    },
+    "largest-contentful-paint": {
+      "numericValue": 1645.5045,
+      "displayValue": "1.6 s"
+    },
+    "cumulative-layout-shift": {
+      "numericValue": 0,
+      "displayValue": "0"
+    },
+    "total-blocking-time": {
+      "numericValue": 0,
+      "displayValue": "0 ms"
+    }
+  }
+}

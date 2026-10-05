@@ -804,7 +804,7 @@ textarea {
   font:
     400 0.75rem Consolas,
     monospace;
-  color: #8791a4;
+  color: var(--muted);
 }
 .copy-feedback:not(:empty) {
   position: fixed;
