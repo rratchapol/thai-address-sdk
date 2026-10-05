@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { site } from "../lib/site";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 import Playground from "../components/Playground";
 ---
 
@@ -8,15 +10,46 @@ import Playground from "../components/Playground";
   description="ทดลองค้นหา จัดรูปแบบ และเลือกจังหวัด อำเภอ ตำบล ด้วย Thai Address SDK พร้อมดูโค้ดและ JSON จริง"
 >
   <div class="container playground-page">
-    <div class="page-heading">
+    <Breadcrumbs /><div class="page-heading">
       <div>
         <p class="eyebrow">TRY IT IN YOUR BROWSER</p><h1>
-          ที่อยู่แบบไหน ก็ลองได้ที่นี่
+          ทดลองค้นหาที่อยู่ไทยและรหัสไปรษณีย์
         </h1><p>ทดลองกับข้อมูลจริง แล้วนำโค้ดไปใช้ในแอปของคุณ</p>
-      </div><span class="version-label">thai-address-sdk <b>v0.1.2</b></span>
+      </div><span class="version-label"
+        >thai-address-sdk <b>v{site.version}</b></span
+      >
     </div><Playground client:load /><p class="playground-footnote">
       ข้อมูลครอบคลุมหน่วยการปกครองและรหัสไปรษณีย์ ไม่รวมบ้านเลขที่ ถนน ซอย
       หรือพิกัด <a href="/api/#limitations">อ่านขอบเขตการใช้งาน</a>
     </p>
+    <section class="playground-guide" aria-labelledby="playground-guide-title">
+      <h2 id="playground-guide-title">Playground ใช้งานอย่างไร?</h2><ol>
+        <li>
+          <strong>ค้นหาที่อยู่:</strong> พิมพ์ชื่อจังหวัด อำเภอ หรือตำบล เช่น “อยูทยา”
+          หรือ “Bangkok” ดูตัวเลือกจาก <code>search()</code> และเปลี่ยนระดับพื้นที่ที่ต้องการ
+        </li><li>
+          <strong>จัดรูปแบบ:</strong> ลอง “บางปะอิน อยูทยา” ด้วย <code
+            >normalizeAddress()</code
+          > ตรวจสอบสถานะและคำตอบทางเลือกก่อนใช้ข้อมูล
+        </li><li>
+          <strong>เลือกพื้นที่:</strong> เลือกจังหวัด ต่อด้วยอำเภอและตำบล แล้วอ่านรหัสไปรษณีย์จากตำบลที่เลือก
+        </li>
+      </ol><p>
+        สลับดูโค้ดหรือ JSON และคัดลอกไปทดลองในแอปของคุณ
+        เดโมคำนวณในเบราว์เซอร์หลังโหลด SDK ไม่มีการส่งคำค้นไปยัง address API
+      </p><noscript
+        ><p>
+          เดโมแบบโต้ตอบต้องใช้ JavaScript คุณยังอ่าน <a href="/getting-started/"
+            >วิธีใช้งาน SDK</a
+          >, <a href="/api/">API Reference</a> และ <a href="/faq/"
+            >คำถามที่พบบ่อย</a
+          > ได้จาก HTML ของเว็บไซต์
+        </p></noscript
+      ><div class="answer-links">
+        <a href="/getting-started/">ติดตั้งไลบรารีในโปรเจกต์</a><a href="/faq/"
+          >คำถามเรื่องออฟไลน์และข้อมูลที่อยู่</a
+        >
+      </div>
+    </section>
   </div>
 </Layout>

@@ -1,0 +1,19 @@
+---
+import { getPage } from "../lib/site";
+const page = getPage(Astro.url.pathname);
+---
+
+{
+  page && page.path !== "/" && (
+    <nav class="breadcrumbs" aria-label="เส้นทางหน้าเว็บ">
+      <ol>
+        <>
+          <li>
+            <a href="/">Thai Address SDK</a>
+          </li>
+          <li aria-current="page">{page.label}</li>
+        </>
+      </ol>
+    </nav>
+  )
+}

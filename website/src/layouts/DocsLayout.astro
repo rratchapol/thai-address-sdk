@@ -1,5 +1,7 @@
 ---
 import Layout from "./Layout.astro";
+import { getPage, site } from "../lib/site";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
 interface Props {
   title: string;
   description: string;
@@ -8,6 +10,7 @@ interface Props {
 }
 const { title, description, eyebrow, toc } = Astro.props;
 const pathname = Astro.url.pathname;
+const page = getPage(pathname);
 ---
 
 <Layout title={title} description={description}>
@@ -26,21 +29,32 @@ const pathname = Astro.url.pathname;
           href="/api/"
           aria-current={pathname === "/api/" ? "page" : undefined}
           >API Reference</a
-        ><a href="/playground/">Playground</a>
+        ><a href="/playground/">Playground</a><a
+          href="/faq/"
+          aria-current={pathname === "/faq/" ? "page" : undefined}
+          >คำถามที่พบบ่อย</a
+        >
       </nav><p class="sidebar-label toc-label">ในหน้านี้</p><nav
         class="toc"
         aria-label="สารบัญหน้านี้"
       >
         {toc.map((item) => <a href={`#${item.id}`}>{item.label}</a>)}
       </nav><div class="sidebar-version">
-        <span class="mono">v0.1.2</span><span
+        <span class="mono">v{site.version}</span><span
           >เอกสารตรงกับเวอร์ชันที่ใช้ในเดโม</span
         >
       </div>
     </aside>
     <article class="docs-article">
+      <Breadcrumbs />
       <header class="docs-heading">
-        <p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{description}</p>
+        <p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{description}</p><p
+          class="reviewed-note"
+        >
+          ตรวจทานกับ SDK v{site.version} · <time datetime={page?.reviewed}
+            >{page?.reviewed}</time
+          > · <a href={site.authorUrl}>ผู้ดูแล {site.author}</a>
+        </p>
       </header><slot />
     </article>
   </div>

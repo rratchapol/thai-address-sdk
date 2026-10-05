@@ -4,21 +4,103 @@ import "@fontsource/ibm-plex-sans-thai/500.css";
 import "@fontsource/ibm-plex-sans-thai/600.css";
 import "../styles/global.css";
 import Icon from "../components/Icon.astro";
+import { absoluteUrl, getPage, site } from "../lib/site";
+import { faqs } from "../lib/faq";
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
-const {
-  title,
-  description = "ค้นหาที่อยู่ไทย แก้คำสะกด และสร้าง dropdown จังหวัด อำเภอ ตำบล ด้วย Thai Address SDK สำหรับ JavaScript และ TypeScript",
-} = Astro.props;
+const { title, description, noindex = false } = Astro.props;
 const pathname = Astro.url.pathname;
+const page = getPage(pathname);
+const pageTitle = page?.title ?? `${title ?? "ไม่พบหน้านี้"} | ${site.name}`;
+const pageDescription =
+  page?.description ??
+  description ??
+  "ไม่พบหน้านี้ในเว็บไซต์ Thai Address SDK กลับไปอ่านคู่มือหรือทดลอง Playground";
+const canonical = page ? absoluteUrl(page.path) : undefined;
+const image = absoluteUrl("/opengraph.png");
 const navigation = [
   { href: "/getting-started/", label: "เริ่มใช้งาน" },
   { href: "/playground/", label: "Playground" },
   { href: "/examples/", label: "ตัวอย่าง" },
   { href: "/api/", label: "API Reference" },
 ];
+const author = { "@type": "Person", name: site.author, url: site.authorUrl };
+const graph: object[] = [];
+if (page && canonical && !noindex) {
+  graph.push({
+    "@type": page.kind === "FAQPage" ? ["WebPage", "FAQPage"] : "WebPage",
+    "@id": `${canonical}#webpage`,
+    url: canonical,
+    name: pageTitle,
+    description: pageDescription,
+    inLanguage: "th",
+    isPartOf: { "@id": `${site.url}#website` },
+    about: { "@id": `${site.url}#sdk` },
+    ...(page.kind === "FAQPage"
+      ? {
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+          })),
+        }
+      : {}),
+  });
+  if (page.path === "/") {
+    graph.push({
+      "@type": "WebSite",
+      "@id": `${site.url}#website`,
+      name: site.name,
+      url: site.url,
+      inLanguage: "th",
+      publisher: author,
+    });
+    graph.push({
+      "@type": "SoftwareSourceCode",
+      "@id": `${site.url}#sdk`,
+      name: site.name,
+      alternateName: "thai-address-sdk",
+      description: pageDescription,
+      url: site.url,
+      codeRepository: site.repository,
+      programmingLanguage: ["TypeScript", "JavaScript"],
+      runtimePlatform: "Node.js >=18; browser with bundler",
+      version: site.version,
+      license: `${site.repository}/blob/main/LICENSE`,
+      author,
+      sameAs: [site.npm, site.repository],
+    });
+  } else {
+    graph.push({
+      "@type": "BreadcrumbList",
+      "@id": `${canonical}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: site.name, item: site.url },
+        { "@type": "ListItem", position: 2, name: page.label, item: canonical },
+      ],
+    });
+    if (page.kind === "TechArticle")
+      graph.push({
+        "@type": "TechArticle",
+        "@id": `${canonical}#article`,
+        headline: pageTitle,
+        description: pageDescription,
+        inLanguage: "th",
+        author,
+        dateModified: page.reviewed,
+        mainEntityOfPage: { "@id": `${canonical}#webpage` },
+        about: { "@id": `${site.url}#sdk` },
+      });
+  }
+}
+// Escape '<' so page text can never close the JSON-LD script element.
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": graph,
+}).replace(/</g, "\\u003c");
 ---
 
 <!doctype html>
@@ -26,32 +108,61 @@ const navigation = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#254ee5" />
+    <meta name="description" content={pageDescription} />
     <meta
-      property="og:title"
-      content={title
-        ? `${title} · Thai Address SDK`
-        : "Thai Address SDK · ที่อยู่ไทยในไม่กี่บรรทัด"}
+      name="robots"
+      content={noindex || !page
+        ? "noindex, follow"
+        : "index, follow, max-image-preview:large"}
     />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#254ee5" />
+    {canonical && !noindex && <link rel="canonical" href={canonical} />}
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link
+      rel="alternate"
+      type="text/plain"
+      href="/llms.txt"
+      title="Thai Address SDK documentation index"
+    />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta
+      property="og:type"
+      content={page?.kind === "TechArticle" ? "article" : "website"}
+    />
+    <meta property="og:site_name" content={site.name} />
     <meta property="og:locale" content="th_TH" />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={image} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Thai Address SDK — JavaScript / TypeScript library for Thai address search, normalization and dropdowns"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={image} />
+    <meta
+      name="twitter:image:alt"
+      content="Thai Address SDK — JavaScript / TypeScript library for Thai addresses"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>
-      {
-        title
-          ? `${title} · Thai Address SDK`
-          : "Thai Address SDK · ที่อยู่ไทยในไม่กี่บรรทัด"
-      }
-    </title>
+    <title>{pageTitle}</title>
+    {
+      graph.length > 0 && (
+        <script type="application/ld+json" set:html={jsonLd} />
+      )
+    }
   </head>
   <body>
     <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
     <header class="site-header">
       <div class="nav-shell">
-        <a class="brand" href="/" aria-label="Thai Address SDK หน้าแรก"
-          ><span class="brand-mark">[th]</span><span
+        <a class="brand" href="/" aria-label="[th] thai address SDK หน้าแรก"
+          ><span class="brand-mark" aria-hidden="true">[th]</span><span
             >thai address<span class="brand-sdk">SDK</span></span
           ></a
         >
@@ -69,6 +180,7 @@ const navigation = [
         </nav>
         <a
           class="github-link"
+          aria-label="GitHub source code ของ Thai Address SDK"
           href="https://github.com/rratchapol/thai-address-sdk"
           target="_blank"
           rel="noreferrer"
@@ -107,8 +219,12 @@ const navigation = [
             href="https://github.com/rratchapol/thai-address-sdk/issues"
             target="_blank"
             rel="noreferrer">แจ้งปัญหา</a
-          ><a href="/api/#data">ข้อมูล & License</a>
-        </div><span class="footer-license">MIT License</span>
+          ><a href="/faq/">คำถามที่พบบ่อย</a><a href="/api/#data"
+            >ข้อมูล & License</a
+          >
+        </div><span class="footer-license"
+          >MIT · ดูแลโดย <a href={site.authorUrl}>{site.author}</a></span
+        >
       </div>
     </footer>
     <div

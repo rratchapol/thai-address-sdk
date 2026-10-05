@@ -1,0 +1,5 @@
+export const quickStart = {
+  search: `import { search } from "thai-address-sdk";\n\nconst [result] = search("อยูทยา", {\n  levels: ["province"],\n  limit: 1,\n});\n\nconsole.log(result?.province.provinceNameTh);\n// "พระนครศรีอยุธยา"\n\nconsole.log(result?.match.matchType);\n// "fuzzy"`,
+  normalize: `import { normalizeAddress } from "thai-address-sdk";\n\nconst result = normalizeAddress("บางปะอิน อยูทยา");\n\nconsole.log(result.status);\n// "matched"\n\nconsole.log(result.bestMatch?.formattedAddress);\n// "อำเภอบางปะอิน จังหวัดพระนครศรีอยุธยา"\n\nconsole.log(result.corrections);\n// รายการคำที่ปรับให้ตรงกับข้อมูล`,
+  dropdown: `import {\n  getProvinces,\n  getDistricts,\n  getSubdistricts,\n} from "thai-address-sdk";\n\nconst provinces = getProvinces();\nconst districts = getDistricts({ provinceCode: 14 });\nconst subdistricts = getSubdistricts({ districtCode: 1406 });\n\nconst selected = subdistricts.find(\n  (item) => item.subdistrictCode === 140601,\n);\nconsole.log(selected?.postalCode);\n// 13160`,
+};

@@ -1,8 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { site } from "../lib/site";
 import Icon from "../components/Icon.astro";
 import CodeBlock from "../components/CodeBlock.astro";
 import SearchPreview from "../components/SearchPreview";
+import { search } from "thai-address-sdk";
+const previewResults = search("อยูทยา", { limit: 3 });
 const snippet = `import { search } from "thai-address-sdk";
 
 const [address] = search("อยูทยา", {
@@ -18,12 +21,13 @@ console.log(address?.province.provinceNameTh);
   <section class="hero container">
     <div class="hero-copy">
       <div class="release-tag">
-        <span>v0.1.2</span> Open source · TypeScript
+        <span>v{site.version}</span> Open source · TypeScript
       </div><h1>
         ที่อยู่ไทย<br /><span>จัดการได้</span><br />ในไม่กี่บรรทัด.
       </h1><p class="hero-description">
-        ค้นหา แก้คำสะกด และจัดรูปแบบที่อยู่ไทย<br class="desktop-break" /> พร้อมใช้ในแอปของคุณ
-        ไม่ต้องมี API key
+        Thai Address SDK คือไลบรารีที่อยู่ไทยสำหรับ JavaScript และ TypeScript<br
+          class="desktop-break"
+        /> ค้นหาจังหวัด อำเภอ ตำบล และรหัสไปรษณีย์ ไม่ต้องมี API key
       </p><div class="hero-actions">
         <a class="button primary" href="/getting-started/"
           ><Icon name="code" />เริ่มใช้งาน</a
@@ -32,8 +36,9 @@ console.log(address?.province.provinceNameTh);
         class="install-command"
         type="button"
         data-copy="npm install thai-address-sdk"
-        aria-label="คัดลอกคำสั่งติดตั้ง"
-        ><span class="prompt">$</span><code>npm install thai-address-sdk</code
+        aria-label="คัดลอกคำสั่ง npm install thai-address-sdk"
+        ><span class="prompt" aria-hidden="true">$</span><code
+          >npm install thai-address-sdk</code
         ><Icon name="copy" size={16} /></button
       ><p class="hero-note">
         JavaScript & TypeScript <span>·</span> Node.js & Browser
@@ -42,7 +47,9 @@ console.log(address?.province.provinceNameTh);
     <div class="hero-demo-wrap">
       <div class="demo-caption">
         <span class="caption-line"></span>จากคำที่พิมพ์ สู่ที่อยู่ที่ใช่
-      </div><SearchPreview client:load /><div class="demo-under-note">
+      </div><SearchPreview initialResults={previewResults} client:idle /><div
+        class="demo-under-note"
+      >
         <Icon name="check" size={16} /> คำค้นอยู่ในแอปของคุณ ไม่มีคำขอไปยัง API
       </div>
     </div>
@@ -128,6 +135,37 @@ console.log(address?.province.provinceNameTh);
         ></a
       >
     </div>
+  </section>
+  <section
+    class="container section sdk-summary"
+    aria-labelledby="sdk-summary-title"
+  >
+    <p class="eyebrow">THAI ADDRESS LIBRARY</p><h2 id="sdk-summary-title">
+      เลือกฟังก์ชันให้ตรงกับงานที่อยู่ไทย
+    </h2>
+    <p>
+      ใช้ <code>search()</code> สำหรับ autocomplete, <code
+        >normalizeAddress()</code
+      > สำหรับข้อความที่มีชื่อพื้นที่หลายส่วน และ <code>getProvinces()</code>, <code
+        >getDistricts()</code
+      >, <code>getSubdistricts()</code> สำหรับ dropdown ข้อมูลอยู่ในแพ็กเกจและทุกฟังก์ชันทำงานแบบ
+      synchronous
+    </p>
+    <p>
+      SDK v{site.version} ใช้ได้ทั้ง ESM และ CommonJS รองรับ Node.js 18+ และ browser
+      ผ่าน bundler โค้ดและข้อมูลต้นทางเผยแพร่ภายใต้ MIT License โดยชุดข้อมูลเป็น snapshot
+      ที่ไม่ได้อัปเดตอัตโนมัติ
+    </p>
+    <div class="answer-links">
+      <a href="/faq/">คำถามที่พบบ่อยเกี่ยวกับการใช้ SDK</a><a href="/api/#data"
+        >ตรวจสอบแหล่งข้อมูลและ License</a
+      ><a href={site.npm}>แพ็กเกจ thai-address-sdk บน npm</a>
+    </div>
+    <p class="reviewed-note">
+      ทบทวนเนื้อหา <time datetime="2026-10-05">2026-10-05</time> · ผู้ดูแล <a
+        href={site.authorUrl}>{site.author}</a
+      >
+    </p>
   </section>
   <section class="container closing-note">
     <Icon name="book" size={24} /><p>

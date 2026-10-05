@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#f4f7fc"/><path d="M870 0h330v630H680z" fill="#edf2ff"/>
+<rect x="65" y="55" width="95" height="70" rx="10" fill="#254ee5"/><text x="82" y="104" font-family="Consolas,monospace" font-size="36" fill="white">[th]</text>
+<text x="65" y="221" font-family="Arial,sans-serif" font-size="76" font-weight="700" fill="#172642">Thai Address SDK</text>
+<text x="68" y="281" font-family="Arial,sans-serif" font-size="32" fill="#65718a">JavaScript / TypeScript library for Thai addresses</text>
+<rect x="65" y="334" width="1069" height="150" rx="14" fill="#182337"/>
+<text x="95" y="385" font-family="Consolas,monospace" font-size="27" fill="#b7caff">npm install thai-address-sdk</text>
+<text x="95" y="438" font-family="Consolas,monospace" font-size="25" fill="#d8e5ff">search()   normalizeAddress()   getSubdistricts()</text>
+<text x="68" y="544" font-family="Arial,sans-serif" font-size="25" fill="#254ee5">Search. Normalize. Build address forms.</text>
+<text x="68" y="592" font-family="Arial,sans-serif" font-size="20" fill="#65718a">www.thai-address-sdk.taotech.site</text>
+</svg>

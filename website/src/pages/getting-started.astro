@@ -1,5 +1,7 @@
 ---
 import DocsLayout from "../layouts/DocsLayout.astro";
+import { site } from "../lib/site";
+import { quickStart } from "../lib/guide";
 import CodeBlock from "../components/CodeBlock.astro";
 const toc = [
   { id: "install", label: "ติดตั้งแพ็กเกจ" },
@@ -11,7 +13,7 @@ const toc = [
 ---
 
 <DocsLayout
-  title="เริ่มใช้งาน"
+  title="เริ่มใช้งาน Thai Address SDK"
   description="จากการติดตั้งสู่ผลลัพธ์แรก ด้วยฟังก์ชันไม่กี่ตัวและข้อมูลที่อยู่ไทยในแพ็กเกจเดียว"
   eyebrow="GETTING STARTED"
   toc={toc}
@@ -36,18 +38,15 @@ const toc = [
         label="Terminal"
       />
     </details><p class="small-note">
-      Playground ในเว็บนี้ใช้เวอร์ชัน 0.1.2 หากต้องการผลลัพธ์ตรงกัน ให้ติดตั้ง <code
-        >thai-address-sdk@0.1.2</code
-      >
+      Playground ในเว็บนี้ใช้เวอร์ชัน {site.version} หากต้องการผลลัพธ์ตรงกัน ให้ติดตั้ง
+      <code>{`thai-address-sdk@${site.version}`}</code>
     </p>
   </section>
   <section id="first-search">
     <h2><span class="step-number">2</span>ค้นหาที่อยู่ครั้งแรก</h2><p>
       ใช้ <code>search()</code> เมื่อคำค้นเป็นชื่อพื้นที่ เช่น จังหวัด อำเภอ หรือตำบล
       ฟังก์ชันจะคืนรายการผลลัพธ์ที่เรียงตามคะแนน
-    </p><CodeBlock
-      code={`import { search } from "thai-address-sdk";\n\nconst [result] = search("อยูทยา", {\n  levels: ["province"],\n  limit: 1,\n});\n\nconsole.log(result?.province.provinceNameTh);\n// "พระนครศรีอยุธยา"\n\nconsole.log(result?.match.matchType);\n// "fuzzy"`}
-    /><p>
+    </p><CodeBlock code={quickStart.search} /><p>
       ข้อมูลอยู่ในแพ็กเกจและประมวลผลแบบ synchronous จึงไม่ต้องใส่ <code
         >await</code
       > เมื่อเรียกฟังก์ชัน SDK หากค้นหาไม่พบจะได้อาร์เรย์ว่าง
@@ -58,12 +57,10 @@ const toc = [
   <section id="normalize">
     <h2><span class="step-number">3</span>จัดรูปแบบข้อความหลายส่วน</h2><p>
       ใช้ <code>normalizeAddress()</code> เมื่อมีชื่ออำเภอร่วมกับจังหวัด ระบบจะพิจารณาความสัมพันธ์ของพื้นที่และรายงานคำที่แก้ไข
-    </p><CodeBlock
-      code={`import { normalizeAddress } from "thai-address-sdk";\n\nconst result = normalizeAddress("บางปะอิน อยูทยา");\n\nconsole.log(result.status);\n// "matched"\n\nconsole.log(result.bestMatch?.formattedAddress);\n// "อำเภอบางปะอิน จังหวัดพระนครศรีอยุธยา"\n\nconsole.log(result.corrections);\n// รายการคำที่ปรับให้ตรงกับข้อมูล`}
-    /><div class="notice">
+    </p><CodeBlock code={quickStart.normalize} /><div class="notice">
       <strong>อ่านสถานะก่อนนำไปบันทึก</strong><p>
         <code>matched</code> คือพบคำตอบที่ผ่านเกณฑ์ ส่วน <code>ambiguous</code> ควรให้ผู้ใช้เลือกจากคำตอบทางเลือก
-        หากเป็น <code>partial</code> ให้เพิ่มรายละเอียด และ <code
+        หากเป็น <code>partial</code> ให้ตรวจสอบหรือเพิ่มรายละเอียด และ <code
           >not_found</code
         > ให้ลองคำค้นใหม่
       </p>
@@ -73,9 +70,7 @@ const toc = [
     <h2><span class="step-number">4</span>นำข้อมูลไปสร้าง dropdown</h2><p>
       เริ่มจากจังหวัดทั้งหมด แล้วใช้รหัสพื้นที่กรองระดับถัดไป
       เมื่อเลือกตำบลแล้วจึงอ่านรหัสไปรษณีย์จากตำบลนั้น
-    </p><CodeBlock
-      code={`import {\n  getProvinces,\n  getDistricts,\n  getSubdistricts,\n} from "thai-address-sdk";\n\nconst provinces = getProvinces();\nconst districts = getDistricts({ provinceCode: 14 });\nconst subdistricts = getSubdistricts({ districtCode: 1406 });\n\nconst selected = subdistricts.find(\n  (item) => item.subdistrictCode === 140601,\n);\nconsole.log(selected?.postalCode);\n// 13160`}
-    /><p>
+    </p><CodeBlock code={quickStart.dropdown} /><p>
       เมื่อเปลี่ยนจังหวัด ให้ล้างค่าอำเภอและตำบล เมื่อเปลี่ยนอำเภอ
       ให้ล้างค่าตำบล เพื่อไม่ให้พื้นที่ต่างระดับขัดแย้งกัน
     </p><a class="inline-link" href="/playground/?mode=dropdown"

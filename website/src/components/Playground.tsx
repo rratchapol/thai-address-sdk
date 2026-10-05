@@ -6,6 +6,7 @@ import type {
   NormalizeResult,
   SearchResult,
 } from "thai-address-sdk";
+import { site } from "../lib/site";
 import { loadSdk, type AddressSdk } from "../lib/sdk";
 
 type Mode = "search" | "normalize" | "dropdown";
@@ -736,7 +737,7 @@ export default function Playground() {
           <p className="output-note">
             {outputTab === "code"
               ? "โค้ดเปลี่ยนตามค่าที่คุณทดลอง คัดลอกไปใช้ในแอปได้เลย"
-              : "ผลลัพธ์จริงจาก thai-address-sdk v0.1.2"}
+              : `ผลลัพธ์จริงจาก thai-address-sdk v${site.version}`}
           </p>
           <p className="copy-status" role="status">
             {copyState}

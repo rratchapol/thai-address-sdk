@@ -19,5 +19,10 @@ const { code, lang = "ts", label = "TypeScript" } = Astro.props;
       ><Icon name="copy" size={15} /><span>คัดลอก</span></button
     >
   </div>
-  <Code code={code} lang={lang} theme="github-dark" wrap={false} />
+  <Code
+    code={code}
+    lang={lang}
+    theme="github-dark-high-contrast"
+    wrap={false}
+  />
 </div>

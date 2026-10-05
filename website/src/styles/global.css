@@ -475,7 +475,7 @@ textarea {
   border-radius: 4px;
   padding: 2px 7px;
 }
-.hero-result h3 {
+.hero-result h2 {
   font-size: 1.45rem;
   margin-bottom: 3px;
 }
@@ -1071,7 +1071,7 @@ textarea {
     padding: 15px;
     min-height: 220px;
   }
-  .hero-result h3 {
+  .hero-result h2 {
     font-size: 1.25rem;
   }
   .address-fields {

@@ -1,5 +1,6 @@
 ---
 import DocsLayout from "../layouts/DocsLayout.astro";
+import { site } from "../lib/site";
 import CodeBlock from "../components/CodeBlock.astro";
 const toc = [
   { id: "search", label: "search" },
@@ -14,7 +15,7 @@ const toc = [
 
 <DocsLayout
   title="API Reference"
-  description="ฟังก์ชัน ตัวเลือก และรูปแบบผลลัพธ์ของ thai-address-sdk v0.1.2"
+  description={`ฟังก์ชัน ตัวเลือก และรูปแบบผลลัพธ์ของ thai-address-sdk v${site.version}`}
   eyebrow="THE REFERENCE"
   toc={toc}
 >
@@ -95,7 +96,8 @@ const toc = [
             ><td>แสดงผลให้ผู้ใช้ตรวจสอบ</td></tr
           ><tr
             ><td><code>partial</code></td><td
-              >พบข้อมูลบางส่วนแต่คะแนนยังไม่สูงพอ</td
+              >candidate ที่ดีที่สุดมีคะแนนต่ำกว่า 0.75
+              และไม่มีคำตอบคู่แข่งใกล้เคียง</td
             ><td>ขอรายละเอียดเพิ่มเติม</td></tr
           ><tr
             ><td><code>ambiguous</code></td><td>มีหลายคำตอบที่คะแนนใกล้กัน</td
@@ -225,9 +227,20 @@ const toc = [
         rel="noreferrer">thailand-geography-json</a
       > โดย Joe Takara ภายใต้ MIT เช่นกัน
     </p><p>
-      Source commit ที่ระบุในแพ็กเกจ: <code class="break-code"
-        >b8b3fb91c7df1129ff5b43cb46f7fcffadd2156b</code
+      Source commit ที่ระบุในแพ็กเกจ (ไม่ใช่วันที่รับรองความสดใหม่ของข้อมูล): <code
+        class="break-code">{site.dataCommit}</code
       >
+    </p><p>
+      ตรวจสอบ snapshot ต้นทางได้ที่ <a
+        href={`https://github.com/thailand-geography-data/thailand-geography-json/tree/${site.dataCommit}`}
+        >ชุดข้อมูล ณ source commit ที่ใช้</a
+      > ข้อมูลนี้เป็นชุดข้อมูลชุมชน ไม่ใช่ API หรือบริการยืนยันที่อยู่ของหน่วยงานรัฐ
+    </p><p>
+      ผู้ดูแลแพ็กเกจคือ <a href={site.authorUrl}>{site.author}</a> ตรวจสอบการเปลี่ยนแปลงผ่าน
+      <a href={`${site.repository}/commits/main/npm-sdk/`}
+        >ประวัติ source code</a
+      > และ <a href={site.npm}>เวอร์ชันบน npm</a> หากพื้นที่หรือรหัสไปรษณีย์เปลี่ยน
+      ต้องอัปเดตแพ็กเกจและทบทวนข้อมูลอีกครั้ง
     </p><p>
       อ่าน <a href="/licenses.txt"
         >ข้อความ License และ attribution ที่มากับเว็บไซต์</a

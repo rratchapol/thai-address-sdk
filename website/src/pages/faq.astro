@@ -1,0 +1,44 @@
+---
+import DocsLayout from "../layouts/DocsLayout.astro";
+import { faqs } from "../lib/faq";
+const toc = faqs.map(({ id, question }) => ({ id, label: question }));
+---
+
+<DocsLayout
+  title="คำถามที่พบบ่อยเกี่ยวกับ Thai Address SDK"
+  description="คำตอบพร้อมขอบเขตการใช้งานของไลบรารีที่อยู่ไทย สำหรับผู้พัฒนาที่เลือกใช้กับ JavaScript, TypeScript, React และ Next.js"
+  eyebrow="FREQUENTLY ASKED QUESTIONS"
+  toc={toc}
+>
+  <p>
+    คำตอบเหล่านี้อ้างอิงพฤติกรรมของ SDK และชุดข้อมูลในแพ็กเกจ อ่านรายละเอียด
+    options และ types เพิ่มเติมได้ใน <a href="/api/">API Reference</a>
+  </p>
+  {
+    faqs.map((faq) => (
+      <section id={faq.id}>
+        <>
+          <h2>{faq.question}</h2>
+          <p>{faq.answer}</p>
+          <div class="answer-links">
+            {faq.links.map((link) => (
+              <a href={link.href}>{link.label}</a>
+            ))}
+          </div>
+        </>
+      </section>
+    ))
+  }
+  <section id="next-step">
+    <h2>เริ่มทดลองใช้งาน</h2><div class="doc-link-grid">
+      <a href="/getting-started/"
+        ><span>ติดตั้งและลองฟังก์ชันหลัก</span><strong>คู่มือเริ่มต้น</strong
+        ></a
+      ><a href="/playground/"
+        ><span>ทดลองข้อมูลก่อนต่อเข้าฟอร์ม</span><strong
+          >Playground ที่อยู่ไทย</strong
+        ></a
+      >
+    </div>
+  </section>
+</DocsLayout>
