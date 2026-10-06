@@ -37,7 +37,7 @@ npm run preview
 
 The website pins the published `thai-address-sdk` to **0.1.3** so documentation and examples use a consistent API. To preview changes to the local SDK, build `../npm-sdk` and temporarily install it with `npm install --no-save ../npm-sdk`; run `npm ci` to restore the published dependency. Update the website's version labels and examples together when changing the dependency.
 
-The default homepage search example is computed with the real SDK at build time and rendered in HTML. The full dataset loads after the visitor changes the query; the homepage component hydrates when idle. Address queries are processed locally by the SDK. The site has no analytics, account system, or address storage. Fonts are bundled and served with the site. Initial page/module downloads still require a connection; the site does not install an offline service worker.
+The default homepage search example is computed with the real SDK at build time and rendered in HTML. The full dataset loads after the visitor changes the query; the homepage component hydrates when idle. Address queries are processed locally by the SDK. The site uses Vercel Web Analytics for visitor and page-view statistics. It has no account system or address storage, and no custom analytics events capture Playground input values. Fonts are bundled and served with the site. Initial page/module downloads still require a connection; the site does not install an offline service worker.
 
 ## Deployment
 
@@ -60,3 +60,13 @@ The optional `run_address_demo` WebMCP tool uses feature detection and the same 
 Vercel uses `vercel.json` to redirect directory pages to the trailing-slash form and set text content types for crawler files. This deployment does not depend on source files outside `website/`.
 
 After deployment, submit `https://www.thai-address-sdk.taotech.site/sitemap.xml` in the verified Google Search Console and Bing Webmaster Tools properties. Track impressions, clicks, indexed URLs and actual AI referral/citation evidence; HTML checks are not measurements of rankings or Core Web Vitals. Full findings and external follow-up steps are in `SEO-AEO-GEO-AUDIT.md`.
+
+## Visitor analytics
+
+The shared Astro layout includes `@vercel/analytics/astro` on every page. Local development uses the SDK development mode; production builds use production mode.
+
+1. Open [this project’s Analytics dashboard](https://vercel.com/taos-projects-c8800652/thai-address-sdk/analytics) and click **Enable** if Web Analytics is not active yet.
+2. Deploy after enabling it so Vercel provisions the analytics routes. Pushing to `main` triggers this project’s deployment; if Analytics was enabled afterward, redeploy the latest production deployment in Vercel.
+3. Visit the production website, then return to Analytics to see **Visitors**, **Page Views**, top pages and referrers. Statistics start after setup; they do not reconstruct earlier visits.
+
+If data stays empty, check that the production deployment contains the Analytics component and that the analytics script and page-view request succeed in the browser Network panel. Ad blockers can prevent collection. See [Vercel’s setup guide](https://vercel.com/docs/analytics/quickstart).
