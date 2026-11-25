@@ -39,6 +39,21 @@ test("filters districts and subdistricts by their parent codes", () => {
   );
 });
 
+test("returns the corrected primary postal code for Lue Amnat", () => {
+  assert.equal(getDistrict(3707)?.postalCode, 37120);
+
+  const subdistricts = getSubdistricts({ districtCode: 3707 });
+  assert.equal(subdistricts.length, 7);
+  assert.ok(subdistricts.every(({ postalCode }) => postalCode === 37120));
+});
+
+test("keeps a single numeric primary postal code for Ao Nang", () => {
+  const aoNang = getSubdistrict(810116);
+  assert.ok(aoNang);
+  assert.equal(aoNang.postalCode, 81180);
+  assert.ok(!Object.hasOwn(aoNang, "postalCodes"));
+});
+
 test("finds an official province through a misspelled alias", () => {
   const [result] = search("อยูทยา");
   assert.ok(result);

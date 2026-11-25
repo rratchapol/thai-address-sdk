@@ -978,7 +978,7 @@
     "subdistrictCode": 102705,
     "subdistrictNameEn": "Nuan Chan",
     "subdistrictNameTh": "นวลจันทร์",
-    "postalCode": 10240
+    "postalCode": 10230
   },
   {
     "id": 110,
@@ -1552,7 +1552,7 @@
     "provinceCode": 10,
     "districtCode": 1048,
     "subdistrictCode": 104801,
-    "subdistrictNameEn": "Thawi Watthana ",
+    "subdistrictNameEn": "Thawi Watthana",
     "subdistrictNameTh": "ทวีวัฒนา",
     "postalCode": 10170
   },
@@ -1689,7 +1689,7 @@
     "subdistrictCode": 110112,
     "subdistrictNameEn": "Bang Pu",
     "subdistrictNameTh": "บางปู",
-    "postalCode": 10270
+    "postalCode": 10280
   },
   {
     "id": 189,
@@ -2929,7 +2929,7 @@
     "provinceCode": 13,
     "districtCode": 1306,
     "subdistrictCode": 130603,
-    "subdistrictNameEn": "Bueng Kham Phoi",
+    "subdistrictNameEn": "Bueng Kham Phroi",
     "subdistrictNameTh": "บึงคำพร้อย",
     "postalCode": 12150
   },
@@ -3226,7 +3226,7 @@
     "provinceCode": 14,
     "districtCode": 1401,
     "subdistrictCode": 140117,
-    "subdistrictNameEn": "Khlong Suan Phu",
+    "subdistrictNameEn": "Khlong Suan Phlu",
     "subdistrictNameTh": "คลองสวนพลู",
     "postalCode": 13000
   },
@@ -3291,7 +3291,7 @@
     "subdistrictCode": 140203,
     "subdistrictNameEn": "Tha Luang",
     "subdistrictNameTh": "ท่าหลวง",
-    "postalCode": 13130
+    "postalCode": 18270
   },
   {
     "id": 367,
@@ -3649,7 +3649,7 @@
     "provinceCode": 14,
     "districtCode": 1404,
     "subdistrictCode": 140421,
-    "subdistrictNameEn": "Po Tang",
+    "subdistrictNameEn": "Pho Taeng",
     "subdistrictNameTh": "โพแตง",
     "postalCode": 13290
   },
@@ -5458,7 +5458,7 @@
     "provinceCode": 15,
     "districtCode": 1506,
     "subdistrictCode": 150603,
-    "subdistrictNameEn": "Phai Dam Patthana",
+    "subdistrictNameEn": "Phai Dam Phatthana",
     "subdistrictNameTh": "ไผ่ดำพัฒนา",
     "postalCode": 14110
   },
@@ -5593,7 +5593,7 @@
     "provinceCode": 15,
     "districtCode": 1507,
     "subdistrictCode": 150703,
-    "subdistrictNameEn": "Optom",
+    "subdistrictNameEn": "Op Thom",
     "subdistrictNameTh": "อบทม",
     "postalCode": 14160
   },
@@ -5658,7 +5658,7 @@
     "subdistrictCode": 160105,
     "subdistrictNameEn": "Khao Phra Ngam",
     "subdistrictNameTh": "เขาพระงาม",
-    "postalCode": 15000
+    "postalCode": 15160
   },
   {
     "id": 630,
@@ -5676,7 +5676,7 @@
     "subdistrictCode": 160107,
     "subdistrictNameEn": "Khok Kathiam",
     "subdistrictNameTh": "โคกกะเทียม",
-    "postalCode": 15000
+    "postalCode": 15160
   },
   {
     "id": 632,
@@ -6351,7 +6351,7 @@
     "subdistrictCode": 160608,
     "subdistrictNameEn": "Bang Phueng",
     "subdistrictNameTh": "บางพึ่ง",
-    "postalCode": 15110
+    "postalCode": 15180
   },
   {
     "id": 707,
@@ -6675,7 +6675,7 @@
     "subdistrictCode": 161006,
     "subdistrictNameEn": "Khao Noi",
     "subdistrictNameTh": "เขาน้อย",
-    "postalCode": 15130
+    "postalCode": 15190
   },
   {
     "id": 743,
@@ -8493,7 +8493,7 @@
     "subdistrictCode": 191105,
     "subdistrictNameEn": "Lam Somphung",
     "subdistrictNameTh": "ลำสมพุง",
-    "postalCode": 18180
+    "postalCode": 30130
   },
   {
     "id": 945,
@@ -8502,7 +8502,7 @@
     "subdistrictCode": 191107,
     "subdistrictNameEn": "Lam Phaya Klang",
     "subdistrictNameTh": "ลำพญากลาง",
-    "postalCode": 18180
+    "postalCode": 30130
   },
   {
     "id": 946,
@@ -8628,7 +8628,7 @@
     "subdistrictCode": 200104,
     "subdistrictNameEn": "Saen Suk",
     "subdistrictNameTh": "แสนสุข",
-    "postalCode": 20000
+    "postalCode": 20130
   },
   {
     "id": 960,
@@ -9267,7 +9267,7 @@
     "subdistrictCode": 200705,
     "subdistrictNameEn": "Nong Kham",
     "subdistrictNameTh": "หนองขาม",
-    "postalCode": 20110
+    "postalCode": 20230
   },
   {
     "id": 1031,
@@ -9501,7 +9501,7 @@
     "subdistrictCode": 210109,
     "subdistrictNameEn": "Noen Phra",
     "subdistrictNameTh": "เนินพระ",
-    "postalCode": 21000
+    "postalCode": 21150
   },
   {
     "id": 1057,
@@ -9690,7 +9690,7 @@
     "subdistrictCode": 210312,
     "subdistrictNameEn": "Phang Rat",
     "subdistrictNameTh": "พังราด",
-    "postalCode": 21110
+    "postalCode": 21170
   },
   {
     "id": 1078,
@@ -9751,7 +9751,7 @@
     "provinceCode": 21,
     "districtCode": 2104,
     "subdistrictCode": 210404,
-    "subdistrictNameEn": "Phong Ta Iam",
+    "subdistrictNameEn": "Phlong Ta-Iam",
     "subdistrictNameTh": "พลงตาเอี่ยม",
     "postalCode": 21210
   },
@@ -9895,7 +9895,7 @@
     "provinceCode": 21,
     "districtCode": 2107,
     "subdistrictCode": 210703,
-    "subdistrictNameEn": "Cham Noi",
+    "subdistrictNameEn": "Cham Kho",
     "subdistrictNameTh": "ชำฆ้อ",
     "postalCode": 21110
   },
@@ -9985,7 +9985,7 @@
     "provinceCode": 22,
     "districtCode": 2201,
     "subdistrictCode": 220105,
-    "subdistrictNameEn": "Kom Bang",
+    "subdistrictNameEn": "Khom Bang",
     "subdistrictNameTh": "คมบาง",
     "postalCode": 22000
   },
@@ -10941,7 +10941,7 @@
     "subdistrictCode": 230601,
     "subdistrictNameEn": "Ko Mak",
     "subdistrictNameTh": "เกาะหมาก",
-    "postalCode": 23000
+    "postalCode": 23120
   },
   {
     "id": 1217,
@@ -11029,7 +11029,7 @@
     "provinceCode": 24,
     "districtCode": 2401,
     "subdistrictCode": 240107,
-    "subdistrictNameEn": "Khlong Chuk Khachoe",
+    "subdistrictNameEn": "Khlong Chuk Krachoe",
     "subdistrictNameTh": "คลองจุกกระเฌอ",
     "postalCode": 24000
   },
@@ -11191,7 +11191,7 @@
     "provinceCode": 24,
     "districtCode": 2402,
     "subdistrictCode": 240211,
-    "subdistrictNameEn": "Sao Cha-Ngo",
+    "subdistrictNameEn": "Sao Cha-Ngok",
     "subdistrictNameTh": "สาวชะโงก",
     "postalCode": 24110
   },
@@ -11337,7 +11337,7 @@
     "subdistrictCode": 240403,
     "subdistrictNameEn": "Bang Wua",
     "subdistrictNameTh": "บางวัว",
-    "postalCode": 24180
+    "postalCode": 24130
   },
   {
     "id": 1261,
@@ -11346,7 +11346,7 @@
     "subdistrictCode": 240404,
     "subdistrictNameEn": "Bang Samak",
     "subdistrictNameTh": "บางสมัคร",
-    "postalCode": 24180
+    "postalCode": 24130
   },
   {
     "id": 1262,
@@ -11364,7 +11364,7 @@
     "subdistrictCode": 240406,
     "subdistrictNameEn": "Bang Kluea",
     "subdistrictNameTh": "บางเกลือ",
-    "postalCode": 24180
+    "postalCode": 24130
   },
   {
     "id": 1264,
@@ -11409,7 +11409,7 @@
     "subdistrictCode": 240411,
     "subdistrictNameEn": "Hom Sin",
     "subdistrictNameTh": "หอมศีล",
-    "postalCode": 24180
+    "postalCode": 24130
   },
   {
     "id": 1269,
@@ -12937,7 +12937,7 @@
     "provinceCode": 27,
     "districtCode": 2703,
     "subdistrictCode": 270309,
-    "subdistrictNameEn": "Khot Lan",
+    "subdistrictNameEn": "Kho Khlan",
     "subdistrictNameTh": "โคคลาน",
     "postalCode": 27180
   },
@@ -13245,7 +13245,7 @@
     "subdistrictCode": 270802,
     "subdistrictNameEn": "Nong Muang",
     "subdistrictNameTh": "หนองม่วง",
-    "postalCode": 27180
+    "postalCode": 27120
   },
   {
     "id": 1473,
@@ -13254,7 +13254,7 @@
     "subdistrictCode": 270803,
     "subdistrictNameEn": "Nong Waeng",
     "subdistrictNameTh": "หนองแวง",
-    "postalCode": 27180
+    "postalCode": 27120
   },
   {
     "id": 1474,
@@ -13326,7 +13326,7 @@
     "subdistrictCode": 300104,
     "subdistrictNameEn": "Khok Sung",
     "subdistrictNameTh": "โคกสูง",
-    "postalCode": 30310
+    "postalCode": 30000
   },
   {
     "id": 1482,
@@ -13425,7 +13425,7 @@
     "subdistrictCode": 300115,
     "subdistrictNameEn": "Ban Pho",
     "subdistrictNameTh": "บ้านโพธิ์",
-    "postalCode": 30310
+    "postalCode": 30000
   },
   {
     "id": 1493,
@@ -13434,7 +13434,7 @@
     "subdistrictCode": 300116,
     "subdistrictNameEn": "Cho Ho",
     "subdistrictNameTh": "จอหอ",
-    "postalCode": 30310
+    "postalCode": 30000
   },
   {
     "id": 1494,
@@ -13488,7 +13488,7 @@
     "subdistrictCode": 300122,
     "subdistrictNameEn": "Talat",
     "subdistrictNameTh": "ตลาด",
-    "postalCode": 30310
+    "postalCode": 30000
   },
   {
     "id": 1500,
@@ -13515,7 +13515,7 @@
     "subdistrictCode": 300125,
     "subdistrictNameEn": "Nong Khai Nam",
     "subdistrictNameTh": "หนองไข่น้ำ",
-    "postalCode": 30310
+    "postalCode": 30000
   },
   {
     "id": 1503,
@@ -14253,7 +14253,7 @@
     "subdistrictCode": 301006,
     "subdistrictNameEn": "Than Prasat",
     "subdistrictNameTh": "ธารปราสาท",
-    "postalCode": 30240
+    "postalCode": 30420
   },
   {
     "id": 1585,
@@ -15333,7 +15333,7 @@
     "subdistrictCode": 302105,
     "subdistrictNameEn": "Mu Si",
     "subdistrictNameTh": "หมูสี",
-    "postalCode": 30130
+    "postalCode": 30450
   },
   {
     "id": 1705,
@@ -15351,7 +15351,7 @@
     "subdistrictCode": 302107,
     "subdistrictNameEn": "Khanong Phra",
     "subdistrictNameTh": "ขนงพระ",
-    "postalCode": 30130
+    "postalCode": 30450
   },
   {
     "id": 1707,
@@ -15360,7 +15360,7 @@
     "subdistrictCode": 302108,
     "subdistrictNameEn": "Pong Ta Long",
     "subdistrictNameTh": "โป่งตาลอง",
-    "postalCode": 30130
+    "postalCode": 30450
   },
   {
     "id": 1708,
@@ -15378,7 +15378,7 @@
     "subdistrictCode": 302110,
     "subdistrictNameEn": "Nong Nam Daeng",
     "subdistrictNameTh": "หนองน้ำแดง",
-    "postalCode": 30130
+    "postalCode": 30450
   },
   {
     "id": 1710,
@@ -15763,7 +15763,7 @@
     "provinceCode": 30,
     "districtCode": 3029,
     "subdistrictCode": 302904,
-    "subdistrictNameEn": "Phrai",
+    "subdistrictNameEn": "Phlai",
     "subdistrictNameTh": "ไพล",
     "postalCode": 30270
   },
@@ -17698,7 +17698,7 @@
     "provinceCode": 32,
     "districtCode": 3201,
     "subdistrictCode": 320113,
-    "subdistrictNameEn": "Sawat",
+    "subdistrictNameEn": "Sawai",
     "subdistrictNameTh": "สวาย",
     "postalCode": 32000
   },
@@ -17968,7 +17968,7 @@
     "provinceCode": 32,
     "districtCode": 3204,
     "subdistrictCode": 320402,
-    "subdistrictNameEn": "Mueang Lueng",
+    "subdistrictNameEn": "Mueang Ling",
     "subdistrictNameTh": "เมืองลีง",
     "postalCode": 32180
   },
@@ -18058,7 +18058,7 @@
     "provinceCode": 32,
     "districtCode": 3205,
     "subdistrictCode": 320503,
-    "subdistrictNameEn": "Phrai",
+    "subdistrictNameEn": "Phlai",
     "subdistrictNameTh": "ไพล",
     "postalCode": 32140
   },
@@ -18139,7 +18139,7 @@
     "provinceCode": 32,
     "districtCode": 3205,
     "subdistrictCode": 320512,
-    "subdistrictNameEn": "Chue Phloeng",
+    "subdistrictNameEn": "Chueaphloeng",
     "subdistrictNameTh": "เชื้อเพลิง",
     "postalCode": 32140
   },
@@ -18175,7 +18175,7 @@
     "provinceCode": 32,
     "districtCode": 3205,
     "subdistrictCode": 320516,
-    "subdistrictNameEn": "Kanta Wacharamuan",
+    "subdistrictNameEn": "Kantuat Ramuan",
     "subdistrictNameTh": "กันตวจระมวล",
     "postalCode": 32140
   },
@@ -18463,7 +18463,7 @@
     "provinceCode": 32,
     "districtCode": 3209,
     "subdistrictCode": 320905,
-    "subdistrictNameEn": "Tlae",
+    "subdistrictNameEn": "Taen",
     "subdistrictNameTh": "แตล",
     "postalCode": 32110
   },
@@ -18940,7 +18940,7 @@
     "provinceCode": 32,
     "districtCode": 3216,
     "subdistrictCode": 321601,
-    "subdistrictNameEn": "Khewa Sinarin",
+    "subdistrictNameEn": "Khwao Sinarin",
     "subdistrictNameTh": "เขวาสินรินทร์",
     "postalCode": 32000
   },
@@ -19903,7 +19903,7 @@
     "provinceCode": 33,
     "districtCode": 3307,
     "subdistrictCode": 330709,
-    "subdistrictNameEn": "Sawat",
+    "subdistrictNameEn": "Sawai",
     "subdistrictNameTh": "สวาย",
     "postalCode": 33170
   },
@@ -20218,7 +20218,7 @@
     "provinceCode": 33,
     "districtCode": 3310,
     "subdistrictCode": 331010,
-    "subdistrictNameEn": "Ta Kat",
+    "subdistrictNameEn": "Ta Ket",
     "subdistrictNameTh": "ตาเกษ",
     "postalCode": 33120
   },
@@ -21181,7 +21181,7 @@
     "provinceCode": 34,
     "districtCode": 3404,
     "subdistrictCode": 340406,
-    "subdistrictNameEn": "Chi Tuan",
+    "subdistrictNameEn": "Chi Thuan",
     "subdistrictNameTh": "ชีทวน",
     "postalCode": 34150
   },
@@ -22144,7 +22144,7 @@
     "provinceCode": 34,
     "districtCode": 3415,
     "subdistrictCode": 341510,
-    "subdistrictNameEn": "Kham Nam Sap",
+    "subdistrictNameEn": "Kham Nam Saep",
     "subdistrictNameTh": "คำน้ำแซบ",
     "postalCode": 34190
   },
@@ -22189,7 +22189,7 @@
     "provinceCode": 34,
     "districtCode": 3415,
     "subdistrictCode": 341520,
-    "subdistrictNameEn": "Nong Kin Phlen",
+    "subdistrictNameEn": "Nong Kin Phen",
     "subdistrictNameTh": "หนองกินเพล",
     "postalCode": 34190
   },
@@ -22612,7 +22612,7 @@
     "provinceCode": 34,
     "districtCode": 3425,
     "subdistrictCode": 342504,
-    "subdistrictNameEn": "Nikhom Lam Dom Noi",
+    "subdistrictNameEn": "Nikhom Sang Ton-Eng Lam Dom Noi",
     "subdistrictNameTh": "นิคมสร้างตนเองลำโดมน้อย",
     "postalCode": 34350
   },
@@ -25125,7 +25125,7 @@
     "subdistrictCode": 370701,
     "subdistrictNameEn": "Amnat",
     "subdistrictNameTh": "อำนาจ",
-    "postalCode": 37000
+    "postalCode": 37120
   },
   {
     "id": 2793,
@@ -25134,7 +25134,7 @@
     "subdistrictCode": 370702,
     "subdistrictNameEn": "Dong Mayang",
     "subdistrictNameTh": "ดงมะยาง",
-    "postalCode": 37000
+    "postalCode": 37120
   },
   {
     "id": 2794,
@@ -25143,7 +25143,7 @@
     "subdistrictCode": 370703,
     "subdistrictNameEn": "Pueai",
     "subdistrictNameTh": "เปือย",
-    "postalCode": 37000
+    "postalCode": 37120
   },
   {
     "id": 2795,
@@ -25152,7 +25152,7 @@
     "subdistrictCode": 370704,
     "subdistrictNameEn": "Dong Bang",
     "subdistrictNameTh": "ดงบัง",
-    "postalCode": 37000
+    "postalCode": 37120
   },
   {
     "id": 2796,
@@ -25161,7 +25161,7 @@
     "subdistrictCode": 370705,
     "subdistrictNameEn": "Rai Khi",
     "subdistrictNameTh": "ไร่ขี",
-    "postalCode": 37000
+    "postalCode": 37120
   },
   {
     "id": 2797,
@@ -25170,7 +25170,7 @@
     "subdistrictCode": 370706,
     "subdistrictNameEn": "Maet",
     "subdistrictNameTh": "แมด",
-    "postalCode": 37000
+    "postalCode": 37120
   },
   {
     "id": 2798,
@@ -25179,14 +25179,14 @@
     "subdistrictCode": 370707,
     "subdistrictNameEn": "Khok Klang",
     "subdistrictNameTh": "โคกกลาง",
-    "postalCode": 37000
+    "postalCode": 37120
   },
   {
     "id": 2799,
     "provinceCode": 38,
     "districtCode": 3801,
     "subdistrictCode": 380101,
-    "subdistrictNameEn": "Seka",
+    "subdistrictNameEn": "Bueng Kan",
     "subdistrictNameTh": "บึงกาฬ",
     "postalCode": 38000
   },
@@ -25195,7 +25195,7 @@
     "provinceCode": 38,
     "districtCode": 3801,
     "subdistrictCode": 380102,
-    "subdistrictNameEn": "Sang ",
+    "subdistrictNameEn": "Non Sombun",
     "subdistrictNameTh": "โนนสมบูรณ์",
     "postalCode": 38000
   },
@@ -25204,7 +25204,7 @@
     "provinceCode": 38,
     "districtCode": 3801,
     "subdistrictCode": 380103,
-    "subdistrictNameEn": "Tha Kok Daeng",
+    "subdistrictNameEn": "Non Sawang",
     "subdistrictNameTh": "โนนสว่าง",
     "postalCode": 38000
   },
@@ -25213,7 +25213,7 @@
     "provinceCode": 38,
     "districtCode": 3801,
     "subdistrictCode": 380104,
-    "subdistrictNameEn": "Ban Tong",
+    "subdistrictNameEn": "Ho Kham",
     "subdistrictNameTh": "หอคำ",
     "postalCode": 38000
   },
@@ -25222,7 +25222,7 @@
     "provinceCode": 38,
     "districtCode": 3801,
     "subdistrictCode": 380105,
-    "subdistrictNameEn": "Pong Hai",
+    "subdistrictNameEn": "Nong Loeng",
     "subdistrictNameTh": "หนองเลิง",
     "postalCode": 38000
   },
@@ -25231,7 +25231,7 @@
     "provinceCode": 38,
     "districtCode": 3801,
     "subdistrictCode": 380106,
-    "subdistrictNameEn": "Nam Chan",
+    "subdistrictNameEn": "Khok Kong",
     "subdistrictNameTh": "โคกก่อง",
     "postalCode": 38000
   },
@@ -25240,7 +25240,7 @@
     "provinceCode": 38,
     "districtCode": 3801,
     "subdistrictCode": 380107,
-    "subdistrictNameEn": "Tha Sa-At",
+    "subdistrictNameEn": "Na Sawan",
     "subdistrictNameTh": "นาสวรรค์",
     "postalCode": 38000
   },
@@ -25249,7 +25249,7 @@
     "provinceCode": 38,
     "districtCode": 3801,
     "subdistrictCode": 380108,
-    "subdistrictNameEn": "Nong Thum",
+    "subdistrictNameEn": "Khai Si",
     "subdistrictNameTh": "ไคสี",
     "postalCode": 38000
   },
@@ -25258,7 +25258,7 @@
     "provinceCode": 38,
     "districtCode": 3801,
     "subdistrictCode": 380109,
-    "subdistrictNameEn": "Sok Kam",
+    "subdistrictNameEn": "Chaiyaphon",
     "subdistrictNameTh": "ชัยพร",
     "postalCode": 38000
   },
@@ -25303,7 +25303,7 @@
     "provinceCode": 38,
     "districtCode": 3802,
     "subdistrictCode": 380202,
-    "subdistrictNameEn": "Don Ya Nang ",
+    "subdistrictNameEn": "Don Ya Nang",
     "subdistrictNameTh": "ดอนหญ้านาง",
     "postalCode": 38180
   },
@@ -25420,7 +25420,7 @@
     "provinceCode": 38,
     "districtCode": 3804,
     "subdistrictCode": 380401,
-    "subdistrictNameEn": "Pak Khat",
+    "subdistrictNameEn": "Seka",
     "subdistrictNameTh": "เซกา",
     "postalCode": 38150
   },
@@ -25429,7 +25429,7 @@
     "provinceCode": 38,
     "districtCode": 3804,
     "subdistrictCode": 380402,
-    "subdistrictNameEn": "Nong Yong",
+    "subdistrictNameEn": "Sang",
     "subdistrictNameTh": "ซาง",
     "postalCode": 38150
   },
@@ -25438,7 +25438,7 @@
     "provinceCode": 38,
     "districtCode": 3804,
     "subdistrictCode": 380403,
-    "subdistrictNameEn": "Na Kang",
+    "subdistrictNameEn": "Tha Kok Daeng",
     "subdistrictNameTh": "ท่ากกแดง",
     "postalCode": 38150
   },
@@ -25447,7 +25447,7 @@
     "provinceCode": 38,
     "districtCode": 3804,
     "subdistrictCode": 380404,
-    "subdistrictNameEn": "Non Sila",
+    "subdistrictNameEn": "Ban Tong",
     "subdistrictNameTh": "บ้านต้อง",
     "postalCode": 38150
   },
@@ -25456,7 +25456,7 @@
     "provinceCode": 38,
     "districtCode": 3804,
     "subdistrictCode": 380405,
-    "subdistrictNameEn": "Som Sanuk",
+    "subdistrictNameEn": "Pong Hai",
     "subdistrictNameTh": "ป่งไฮ",
     "postalCode": 38150
   },
@@ -25465,7 +25465,7 @@
     "provinceCode": 38,
     "districtCode": 3804,
     "subdistrictCode": 380406,
-    "subdistrictNameEn": "Na Dong",
+    "subdistrictNameEn": "Nam Chan",
     "subdistrictNameTh": "น้ำจั้น",
     "postalCode": 38150
   },
@@ -25501,7 +25501,7 @@
     "provinceCode": 38,
     "districtCode": 3805,
     "subdistrictCode": 380501,
-    "subdistrictNameEn": "Bueng Khong Long",
+    "subdistrictNameEn": "Pak Khat",
     "subdistrictNameTh": "ปากคาด",
     "postalCode": 38190
   },
@@ -25510,7 +25510,7 @@
     "provinceCode": 38,
     "districtCode": 3805,
     "subdistrictCode": 380502,
-    "subdistrictNameEn": "Pho Mak Khaeng",
+    "subdistrictNameEn": "Nong Yong",
     "subdistrictNameTh": "หนองยอง",
     "postalCode": 38190
   },
@@ -25519,7 +25519,7 @@
     "provinceCode": 38,
     "districtCode": 3805,
     "subdistrictCode": 380503,
-    "subdistrictNameEn": "Dong Bang",
+    "subdistrictNameEn": "Na Kang",
     "subdistrictNameTh": "นากั้ง",
     "postalCode": 38190
   },
@@ -25528,7 +25528,7 @@
     "provinceCode": 38,
     "districtCode": 3805,
     "subdistrictCode": 380504,
-    "subdistrictNameEn": "Tha Dok Kham",
+    "subdistrictNameEn": "Non Sila",
     "subdistrictNameTh": "โนนศิลา",
     "postalCode": 38190
   },
@@ -25537,7 +25537,7 @@
     "provinceCode": 38,
     "districtCode": 3805,
     "subdistrictCode": 380505,
-    "subdistrictNameEn": "Som Sanook",
+    "subdistrictNameEn": "Som Sanuk",
     "subdistrictNameTh": "สมสนุก",
     "postalCode": 38190
   },
@@ -26754,7 +26754,7 @@
     "subdistrictCode": 400701,
     "subdistrictNameEn": "Nam Phong",
     "subdistrictNameTh": "น้ำพอง",
-    "postalCode": 40140
+    "postalCode": 40310
   },
   {
     "id": 2974,
@@ -26853,7 +26853,7 @@
     "subdistrictCode": 400712,
     "subdistrictNameEn": "Kut Nam Sai",
     "subdistrictNameTh": "กุดน้ำใส",
-    "postalCode": 40140
+    "postalCode": 40310
   },
   {
     "id": 2985,
@@ -27688,7 +27688,7 @@
     "provinceCode": 40,
     "districtCode": 4019,
     "subdistrictCode": 401902,
-    "subdistrictNameEn": "Dong Mueang Am",
+    "subdistrictNameEn": "Dong Mueang Aem",
     "subdistrictNameTh": "ดงเมืองแอม",
     "postalCode": 40280
   },
@@ -28948,7 +28948,7 @@
     "provinceCode": 41,
     "districtCode": 4117,
     "subdistrictCode": 411707,
-    "subdistrictNameEn": "Champa Mok",
+    "subdistrictNameEn": "Champa Mong",
     "subdistrictNameTh": "จำปาโมง",
     "postalCode": 41160
   },
@@ -29326,7 +29326,7 @@
     "provinceCode": 41,
     "districtCode": 4124,
     "subdistrictCode": 412401,
-    "subdistrictNameEn": "Ban Chiet",
+    "subdistrictNameEn": "Ban Chit",
     "subdistrictNameTh": "บ้านจีต",
     "postalCode": 41130
   },
@@ -29490,7 +29490,7 @@
     "subdistrictCode": 420112,
     "subdistrictNameEn": "Na Khaem",
     "subdistrictNameTh": "นาแขม",
-    "postalCode": 42000
+    "postalCode": 42100
   },
   {
     "id": 3278,
@@ -30496,7 +30496,7 @@
     "provinceCode": 43,
     "districtCode": 4305,
     "subdistrictCode": 430509,
-    "subdistrictNameEn": "Some",
+    "subdistrictNameEn": "Soem",
     "subdistrictNameTh": "เซิม",
     "postalCode": 43120
   },
@@ -30642,7 +30642,7 @@
     "subdistrictCode": 431501,
     "subdistrictNameEn": "Fao Rai",
     "subdistrictNameTh": "เฝ้าไร่",
-    "postalCode": 43120
+    "postalCode": 43230
   },
   {
     "id": 3406,
@@ -30651,7 +30651,7 @@
     "subdistrictCode": 431502,
     "subdistrictNameEn": "Na Di",
     "subdistrictNameTh": "นาดี",
-    "postalCode": 43120
+    "postalCode": 43230
   },
   {
     "id": 3407,
@@ -30660,7 +30660,7 @@
     "subdistrictCode": 431503,
     "subdistrictNameEn": "Nong Luang",
     "subdistrictNameTh": "หนองหลวง",
-    "postalCode": 43120
+    "postalCode": 43230
   },
   {
     "id": 3408,
@@ -30669,7 +30669,7 @@
     "subdistrictCode": 431504,
     "subdistrictNameEn": "Wang Luang",
     "subdistrictNameTh": "วังหลวง",
-    "postalCode": 43120
+    "postalCode": 43230
   },
   {
     "id": 3409,
@@ -30678,7 +30678,7 @@
     "subdistrictCode": 431505,
     "subdistrictNameEn": "Udom Phon",
     "subdistrictNameTh": "อุดมพร",
-    "postalCode": 43120
+    "postalCode": 43230
   },
   {
     "id": 3410,
@@ -30766,7 +30766,7 @@
     "provinceCode": 44,
     "districtCode": 4401,
     "subdistrictCode": 440102,
-    "subdistrictNameEn": "Khewa",
+    "subdistrictNameEn": "Khwao",
     "subdistrictNameTh": "เขวา",
     "postalCode": 44000
   },
@@ -30955,7 +30955,7 @@
     "provinceCode": 44,
     "districtCode": 4403,
     "subdistrictCode": 440304,
-    "subdistrictNameEn": "Khewa Rai",
+    "subdistrictNameEn": "Khwao Rai",
     "subdistrictNameTh": "เขวาไร่",
     "postalCode": 44140
   },
@@ -31135,7 +31135,7 @@
     "provinceCode": 44,
     "districtCode": 4404,
     "subdistrictCode": 440407,
-    "subdistrictNameEn": "Khewa Yai",
+    "subdistrictNameEn": "Khwao Yai",
     "subdistrictNameTh": "เขวาใหญ่",
     "postalCode": 44150
   },
@@ -31405,7 +31405,7 @@
     "provinceCode": 44,
     "districtCode": 4407,
     "subdistrictCode": 440704,
-    "subdistrictNameEn": "Khewa Rai",
+    "subdistrictNameEn": "Khwao Rai",
     "subdistrictNameTh": "เขวาไร่",
     "postalCode": 44170
   },
@@ -31585,7 +31585,7 @@
     "provinceCode": 44,
     "districtCode": 4408,
     "subdistrictCode": 440820,
-    "subdistrictNameEn": "Phara-Aen",
+    "subdistrictNameEn": "Phan Aen",
     "subdistrictNameTh": "ภารแอ่น",
     "postalCode": 44110
   },
@@ -31855,7 +31855,7 @@
     "provinceCode": 44,
     "districtCode": 4411,
     "subdistrictCode": 441106,
-    "subdistrictNameEn": "Kham Rian",
+    "subdistrictNameEn": "Sangsaeng",
     "subdistrictNameTh": "สร้างแซ่ง",
     "postalCode": 44210
   },
@@ -32440,7 +32440,7 @@
     "provinceCode": 45,
     "districtCode": 4505,
     "subdistrictCode": 450510,
-    "subdistrictNameEn": "Khewa Thung",
+    "subdistrictNameEn": "Khwao Thung",
     "subdistrictNameTh": "เขวาทุ่ง",
     "postalCode": 45170
   },
@@ -34123,7 +34123,7 @@
     "provinceCode": 46,
     "districtCode": 4606,
     "subdistrictCode": 460606,
-    "subdistrictNameEn": "Kut Sinkhum Mai",
+    "subdistrictNameEn": "Kut Sim Khum Mai",
     "subdistrictNameTh": "กุดสิมคุ้มใหม่",
     "postalCode": 46160
   },
@@ -34773,7 +34773,7 @@
     "subdistrictCode": 461601,
     "subdistrictNameEn": "Na Khu",
     "subdistrictNameTh": "นาคู",
-    "postalCode": 46160
+    "postalCode": 46250
   },
   {
     "id": 3865,
@@ -34782,7 +34782,7 @@
     "subdistrictCode": 461602,
     "subdistrictNameEn": "Sai Na Wang",
     "subdistrictNameTh": "สายนาวัง",
-    "postalCode": 46160
+    "postalCode": 46250
   },
   {
     "id": 3866,
@@ -34791,7 +34791,7 @@
     "subdistrictCode": 461603,
     "subdistrictNameEn": "Non Na Chan",
     "subdistrictNameTh": "โนนนาจาน",
-    "postalCode": 46160
+    "postalCode": 46250
   },
   {
     "id": 3867,
@@ -34800,7 +34800,7 @@
     "subdistrictCode": 461604,
     "subdistrictNameEn": "Bo Kaeo",
     "subdistrictNameTh": "บ่อแก้ว",
-    "postalCode": 46160
+    "postalCode": 46250
   },
   {
     "id": 3868,
@@ -34809,7 +34809,7 @@
     "subdistrictCode": 461605,
     "subdistrictNameEn": "Phu Laen Chang",
     "subdistrictNameTh": "ภูแล่นช้าง",
-    "postalCode": 46160
+    "postalCode": 46250
   },
   {
     "id": 3869,
@@ -34953,7 +34953,7 @@
     "subdistrictCode": 470107,
     "subdistrictNameEn": "Tha Rae",
     "subdistrictNameTh": "ท่าแร่",
-    "postalCode": 47000
+    "postalCode": 47230
   },
   {
     "id": 3885,
@@ -35077,7 +35077,7 @@
     "provinceCode": 47,
     "districtCode": 4702,
     "subdistrictCode": 470204,
-    "subdistrictNameEn": "Pho Phisan",
+    "subdistrictNameEn": "Pho Phaisan",
     "subdistrictNameTh": "โพธิไพศาล",
     "postalCode": 47210
   },
@@ -35329,7 +35329,7 @@
     "provinceCode": 47,
     "districtCode": 4707,
     "subdistrictCode": 470704,
-    "subdistrictNameEn": "Suwanakham",
+    "subdistrictNameEn": "Suwannakham",
     "subdistrictNameTh": "สุวรรณคาม",
     "postalCode": 47270
   },
@@ -35997,7 +35997,7 @@
     "subdistrictCode": 471801,
     "subdistrictNameEn": "Sang Kho",
     "subdistrictNameTh": "สร้างค้อ",
-    "postalCode": 47180
+    "postalCode": 47310
   },
   {
     "id": 4001,
@@ -36006,7 +36006,7 @@
     "subdistrictCode": 471802,
     "subdistrictNameEn": "Luplao",
     "subdistrictNameTh": "หลุบเลา",
-    "postalCode": 47180
+    "postalCode": 47310
   },
   {
     "id": 4002,
@@ -36015,7 +36015,7 @@
     "subdistrictCode": 471803,
     "subdistrictNameEn": "Khok Phu",
     "subdistrictNameTh": "โคกภู",
-    "postalCode": 47180
+    "postalCode": 47310
   },
   {
     "id": 4003,
@@ -36024,7 +36024,7 @@
     "subdistrictCode": 471804,
     "subdistrictNameEn": "Kok Pla Sio",
     "subdistrictNameTh": "กกปลาซิว",
-    "postalCode": 47180
+    "postalCode": 47310
   },
   {
     "id": 4004,
@@ -36184,7 +36184,7 @@
     "provinceCode": 48,
     "districtCode": 4802,
     "subdistrictCode": 480203,
-    "subdistrictNameEn": "Kut Takai",
+    "subdistrictNameEn": "Kutakai",
     "subdistrictNameTh": "กุตาไก้",
     "postalCode": 48160
   },
@@ -36778,7 +36778,7 @@
     "provinceCode": 48,
     "districtCode": 4809,
     "subdistrictCode": 480905,
-    "subdistrictNameEn": "Lao Phathana",
+    "subdistrictNameEn": "Lao Phatthana",
     "subdistrictNameTh": "เหล่าพัฒนา",
     "postalCode": 48180
   },
@@ -37219,7 +37219,7 @@
     "provinceCode": 49,
     "districtCode": 4905,
     "subdistrictCode": 490503,
-    "subdistrictNameEn": "Ban Shong",
+    "subdistrictNameEn": "Ban Song",
     "subdistrictNameTh": "บ้านซ่ง",
     "postalCode": 49110
   },
@@ -37896,7 +37896,7 @@
     "subdistrictCode": 500606,
     "subdistrictNameEn": "Sop Poeng",
     "subdistrictNameTh": "สบเปิง",
-    "postalCode": 50150
+    "postalCode": 50330
   },
   {
     "id": 4212,
@@ -38101,7 +38101,7 @@
     "provinceCode": 50,
     "districtCode": 5008,
     "subdistrictCode": 500805,
-    "subdistrictNameEn": "Yung Moen",
+    "subdistrictNameEn": "Yang Moen",
     "subdistrictNameTh": "ยั้งเมิน",
     "postalCode": 50250
   },
@@ -38137,7 +38137,7 @@
     "provinceCode": 50,
     "districtCode": 5009,
     "subdistrictCode": 500905,
-    "subdistrictNameEn": "Mae Soon",
+    "subdistrictNameEn": "Mae Sun",
     "subdistrictNameTh": "แม่สูน",
     "postalCode": 50110
   },
@@ -38884,7 +38884,7 @@
     "provinceCode": 50,
     "districtCode": 5018,
     "subdistrictCode": 501805,
-    "subdistrictNameEn": "Sop Khong",
+    "subdistrictNameEn": "Mae Long",
     "subdistrictNameTh": "แม่หลอง",
     "postalCode": 50310
   },
@@ -39217,7 +39217,7 @@
     "provinceCode": 50,
     "districtCode": 5025,
     "subdistrictCode": 502502,
-    "subdistrictNameEn": "Mae Dad",
+    "subdistrictNameEn": "Mae Daet",
     "subdistrictNameTh": "แม่แดด",
     "postalCode": 58130
   },
@@ -39226,7 +39226,7 @@
     "provinceCode": 50,
     "districtCode": 5025,
     "subdistrictCode": 502503,
-    "subdistrictNameEn": "Jam Luang",
+    "subdistrictNameEn": "Chaem Luang",
     "subdistrictNameTh": "แจ่มหลวง",
     "postalCode": 58130
   },
@@ -40243,7 +40243,7 @@
     "provinceCode": 52,
     "districtCode": 5207,
     "subdistrictCode": 520708,
-    "subdistrictNameEn": "Wang Sai Thong",
+    "subdistrictNameEn": "Wang Sai Kham",
     "subdistrictNameTh": "วังทรายคำ",
     "postalCode": 52140
   },
@@ -40567,7 +40567,7 @@
     "provinceCode": 52,
     "districtCode": 5213,
     "subdistrictCode": 521303,
-    "subdistrictNameEn": "Thung Khwao",
+    "subdistrictNameEn": "Thung Kwao",
     "subdistrictNameTh": "ทุ่งกว๋าว",
     "postalCode": 52240
   },
@@ -41386,7 +41386,7 @@
     "provinceCode": 54,
     "districtCode": 5402,
     "subdistrictCode": 540204,
-    "subdistrictNameEn": "Si Narong",
+    "subdistrictNameEn": "Rong Khem",
     "subdistrictNameTh": "ร้องเข็ม",
     "postalCode": 54140
   },
@@ -41413,7 +41413,7 @@
     "provinceCode": 54,
     "districtCode": 5402,
     "subdistrictCode": 540207,
-    "subdistrictNameEn": "Rong Khem",
+    "subdistrictNameEn": "Thung Si",
     "subdistrictNameTh": "ทุ่งศรี",
     "postalCode": 54140
   },
@@ -41935,7 +41935,7 @@
     "provinceCode": 55,
     "districtCode": 5501,
     "subdistrictCode": 550105,
-    "subdistrictNameEn": "Thuem Thong",
+    "subdistrictNameEn": "Thuem Tong",
     "subdistrictNameTh": "ถืมตอง",
     "postalCode": 55000
   },
@@ -41980,7 +41980,7 @@
     "provinceCode": 55,
     "districtCode": 5501,
     "subdistrictCode": 550116,
-    "subdistrictNameEn": "Suak",
+    "subdistrictNameEn": "Bo Suak",
     "subdistrictNameTh": "บ่อสวก",
     "postalCode": 55000
   },
@@ -42187,7 +42187,7 @@
     "provinceCode": 55,
     "districtCode": 5505,
     "subdistrictCode": 550506,
-    "subdistrictNameEn": "Ouan",
+    "subdistrictNameEn": "Uan",
     "subdistrictNameTh": "อวน",
     "postalCode": 55120
   },
@@ -42241,7 +42241,7 @@
     "provinceCode": 55,
     "districtCode": 5505,
     "subdistrictCode": 550514,
-    "subdistrictNameEn": "Wara Nakhon",
+    "subdistrictNameEn": "Woranakhon",
     "subdistrictNameTh": "วรนคร",
     "postalCode": 55120
   },
@@ -42430,7 +42430,7 @@
     "provinceCode": 55,
     "districtCode": 5507,
     "subdistrictCode": 550711,
-    "subdistrictNameEn": "I Na Lai",
+    "subdistrictNameEn": "Ai Na Lai",
     "subdistrictNameTh": "อ่ายนาไลย",
     "postalCode": 55110
   },
@@ -43638,7 +43638,7 @@
     "subdistrictCode": 570308,
     "subdistrictNameEn": "Si Don Chai",
     "subdistrictNameTh": "ศรีดอนชัย",
-    "postalCode": 57230
+    "postalCode": 57140
   },
   {
     "id": 4850,
@@ -43728,7 +43728,7 @@
     "subdistrictCode": 570412,
     "subdistrictNameEn": "Si Don Chai",
     "subdistrictNameTh": "ศรีดอนไชย",
-    "postalCode": 57160
+    "postalCode": 57230
   },
   {
     "id": 4860,
@@ -43737,7 +43737,7 @@
     "subdistrictCode": 570413,
     "subdistrictNameEn": "Nong Raet",
     "subdistrictNameTh": "หนองแรด",
-    "postalCode": 57160
+    "postalCode": 57230
   },
   {
     "id": 4861,
@@ -44149,7 +44149,7 @@
     "provinceCode": 57,
     "districtCode": 5710,
     "subdistrictCode": 571001,
-    "subdistrictNameEn": "Mae Saruai",
+    "subdistrictNameEn": "Mae Suai",
     "subdistrictNameTh": "แม่สรวย",
     "postalCode": 57180
   },
@@ -44466,7 +44466,7 @@
     "subdistrictCode": 571701,
     "subdistrictNameEn": "Thung Ko",
     "subdistrictNameTh": "ทุ่งก่อ",
-    "postalCode": 57210
+    "postalCode": 57350
   },
   {
     "id": 4942,
@@ -44475,7 +44475,7 @@
     "subdistrictCode": 571702,
     "subdistrictNameEn": "Dong Mahawan",
     "subdistrictNameTh": "ดงมหาวัน",
-    "postalCode": 57210
+    "postalCode": 57350
   },
   {
     "id": 4943,
@@ -44484,7 +44484,7 @@
     "subdistrictCode": 571703,
     "subdistrictNameEn": "Pa Sang",
     "subdistrictNameTh": "ป่าซาง",
-    "postalCode": 57210
+    "postalCode": 57350
   },
   {
     "id": 4944,
@@ -46300,7 +46300,7 @@
     "provinceCode": 61,
     "districtCode": 6102,
     "subdistrictCode": 610210,
-    "subdistrictNameEn": "Taluk Duk",
+    "subdistrictNameEn": "Taluk Du",
     "subdistrictNameTh": "ตลุกดู่",
     "postalCode": 61120
   },
@@ -46795,7 +46795,7 @@
     "provinceCode": 62,
     "districtCode": 6201,
     "subdistrictCode": 620111,
-    "subdistrictNameEn": "Kon Ti",
+    "subdistrictNameEn": "Khonthi",
     "subdistrictNameTh": "คณฑี",
     "postalCode": 62000
   },
@@ -47967,7 +47967,7 @@
     "subdistrictCode": 630901,
     "subdistrictNameEn": "Chiang Thong",
     "subdistrictNameTh": "เชียงทอง",
-    "postalCode": 63000
+    "postalCode": 63180
   },
   {
     "id": 5331,
@@ -47976,7 +47976,7 @@
     "subdistrictCode": 630902,
     "subdistrictNameEn": "Na Bot",
     "subdistrictNameTh": "นาโบสถ์",
-    "postalCode": 63000
+    "postalCode": 63180
   },
   {
     "id": 5332,
@@ -47985,7 +47985,7 @@
     "subdistrictCode": 630903,
     "subdistrictNameEn": "Pradang",
     "subdistrictNameTh": "ประดาง",
-    "postalCode": 63000
+    "postalCode": 63180
   },
   {
     "id": 5333,
@@ -50163,7 +50163,7 @@
     "subdistrictCode": 660702,
     "subdistrictNameEn": "Kamphaeng Din",
     "subdistrictNameTh": "กำแพงดิน",
-    "postalCode": 66140
+    "postalCode": 66220
   },
   {
     "id": 5575,
@@ -50566,7 +50566,7 @@
     "provinceCode": 67,
     "districtCode": 6702,
     "subdistrictCode": 670202,
-    "subdistrictNameEn": "Dong Khu",
+    "subdistrictNameEn": "Dong Khui",
     "subdistrictNameTh": "ดงขุย",
     "postalCode": 67190
   },
@@ -50620,7 +50620,7 @@
     "provinceCode": 67,
     "districtCode": 6702,
     "subdistrictCode": 670209,
-    "subdistrictNameEn": "Takut Lai",
+    "subdistrictNameEn": "Takut Rai",
     "subdistrictNameTh": "ตะกุดไร",
     "postalCode": 67190
   },
@@ -51430,7 +51430,7 @@
     "provinceCode": 67,
     "districtCode": 6711,
     "subdistrictCode": 671105,
-    "subdistrictNameEn": "Sadao Phong",
+    "subdistrictNameEn": "Sado Phong",
     "subdistrictNameTh": "สะเดาะพง",
     "postalCode": 67270
   },
@@ -51853,7 +51853,7 @@
     "provinceCode": 70,
     "districtCode": 7004,
     "subdistrictCode": 700413,
-    "subdistrictNameEn": "Don Phi",
+    "subdistrictNameEn": "Don Phai",
     "subdistrictNameTh": "ดอนไผ่",
     "postalCode": 70130
   },
@@ -52096,7 +52096,7 @@
     "provinceCode": 70,
     "districtCode": 7007,
     "subdistrictCode": 700705,
-    "subdistrictNameEn": "Khlong Ta Kot",
+    "subdistrictNameEn": "Khlong Ta Khot",
     "subdistrictNameTh": "คลองตาคต",
     "postalCode": 70120
   },
@@ -54006,7 +54006,7 @@
     "subdistrictCode": 720713,
     "subdistrictNameEn": "Nong Bo",
     "subdistrictNameTh": "หนองบ่อ",
-    "postalCode": 72110
+    "postalCode": 72190
   },
   {
     "id": 6002,
@@ -54114,7 +54114,7 @@
     "subdistrictCode": 720903,
     "subdistrictNameEn": "Chorakhe Sam Phan",
     "subdistrictNameTh": "จรเข้สามพัน",
-    "postalCode": 72160
+    "postalCode": 71170
   },
   {
     "id": 6014,
@@ -56778,7 +56778,7 @@
     "subdistrictCode": 770105,
     "subdistrictNameEn": "Ao Noi",
     "subdistrictNameTh": "อ่าวน้อย",
-    "postalCode": 77000
+    "postalCode": 77210
   },
   {
     "id": 6310,
@@ -57435,7 +57435,7 @@
     "subdistrictCode": 800405,
     "subdistrictNameEn": "Mai Riang",
     "subdistrictNameTh": "ไม้เรียง",
-    "postalCode": 80150
+    "postalCode": 80260
   },
   {
     "id": 6383,
@@ -57453,7 +57453,7 @@
     "subdistrictCode": 800407,
     "subdistrictNameEn": "Na Kacha",
     "subdistrictNameTh": "นากะชะ",
-    "postalCode": 80150
+    "postalCode": 80260
   },
   {
     "id": 6385,
@@ -58047,7 +58047,7 @@
     "subdistrictCode": 801203,
     "subdistrictNameEn": "Pa Rakam",
     "subdistrictNameTh": "ป่าระกำ",
-    "postalCode": 80140
+    "postalCode": 80370
   },
   {
     "id": 6451,
@@ -58065,7 +58065,7 @@
     "subdistrictCode": 801205,
     "subdistrictNameEn": "Khlong Krabue",
     "subdistrictNameTh": "คลองกระบือ",
-    "postalCode": 80140
+    "postalCode": 80370
   },
   {
     "id": 6453,
@@ -58083,7 +58083,7 @@
     "subdistrictCode": 801207,
     "subdistrictNameEn": "Ban Mai",
     "subdistrictNameTh": "บ้านใหม่",
-    "postalCode": 80140
+    "postalCode": 80370
   },
   {
     "id": 6455,
@@ -58092,7 +58092,7 @@
     "subdistrictCode": 801208,
     "subdistrictNameEn": "Hu Long",
     "subdistrictNameTh": "หูล่อง",
-    "postalCode": 80140
+    "postalCode": 80370
   },
   {
     "id": 6456,
@@ -58110,7 +58110,7 @@
     "subdistrictCode": 801210,
     "subdistrictNameEn": "Pak Phanang Fang Tawan Tok",
     "subdistrictNameTh": "ปากพนังฝั่งตะวันตก",
-    "postalCode": 80140
+    "postalCode": 80370
   },
   {
     "id": 6458,
@@ -58119,7 +58119,7 @@
     "subdistrictCode": 801211,
     "subdistrictNameEn": "Bang Sala",
     "subdistrictNameTh": "บางศาลา",
-    "postalCode": 80140
+    "postalCode": 80370
   },
   {
     "id": 6459,
@@ -58137,7 +58137,7 @@
     "subdistrictCode": 801213,
     "subdistrictNameEn": "Bang Taphong",
     "subdistrictNameTh": "บางตะพง",
-    "postalCode": 80140
+    "postalCode": 80370
   },
   {
     "id": 6461,
@@ -58531,7 +58531,7 @@
     "provinceCode": 80,
     "districtCode": 8019,
     "subdistrictCode": 801903,
-    "subdistrictNameEn": "Khuan Nong Kwa",
+    "subdistrictNameEn": "Khuan Nong Khwa",
     "subdistrictNameTh": "ควนหนองคว้า",
     "postalCode": 80130
   },
@@ -58695,7 +58695,7 @@
     "subdistrictCode": 802304,
     "subdistrictNameEn": "Thang Phun",
     "subdistrictNameTh": "ทางพูน",
-    "postalCode": 80190
+    "postalCode": 80290
   },
   {
     "id": 6523,
@@ -58767,7 +58767,7 @@
     "subdistrictCode": 810116,
     "subdistrictNameEn": "Ao Nang",
     "subdistrictNameTh": "อ่าวนาง",
-    "postalCode": 81000
+    "postalCode": 81180
   },
   {
     "id": 6531,
@@ -58776,7 +58776,7 @@
     "subdistrictCode": 810117,
     "subdistrictNameEn": "Nong Thale",
     "subdistrictNameTh": "หนองทะเล",
-    "postalCode": 81000
+    "postalCode": 81180
   },
   {
     "id": 6532,
@@ -59073,7 +59073,7 @@
     "subdistrictCode": 810701,
     "subdistrictNameEn": "Lam Thap",
     "subdistrictNameTh": "ลำทับ",
-    "postalCode": 81120
+    "postalCode": 81190
   },
   {
     "id": 6565,
@@ -59082,7 +59082,7 @@
     "subdistrictCode": 810702,
     "subdistrictNameEn": "Din Udom",
     "subdistrictNameTh": "ดินอุดม",
-    "postalCode": 81120
+    "postalCode": 81190
   },
   {
     "id": 6566,
@@ -59091,7 +59091,7 @@
     "subdistrictCode": 810703,
     "subdistrictNameEn": "Thung Sai Thong",
     "subdistrictNameTh": "ทุ่งไทรทอง",
-    "postalCode": 81120
+    "postalCode": 81190
   },
   {
     "id": 6567,
@@ -59100,7 +59100,7 @@
     "subdistrictCode": 810704,
     "subdistrictNameEn": "Din Daeng",
     "subdistrictNameTh": "ดินแดง",
-    "postalCode": 81120
+    "postalCode": 81190
   },
   {
     "id": 6568,
@@ -59388,7 +59388,7 @@
     "subdistrictCode": 820407,
     "subdistrictNameEn": "Khlong Khian",
     "subdistrictNameTh": "คลองเคียน",
-    "postalCode": 82130
+    "postalCode": 82140
   },
   {
     "id": 6600,
@@ -59424,7 +59424,7 @@
     "subdistrictCode": 820504,
     "subdistrictNameEn": "Bang Muang",
     "subdistrictNameTh": "บางม่วง",
-    "postalCode": 82110
+    "postalCode": 82190
   },
   {
     "id": 6604,
@@ -59451,7 +59451,7 @@
     "subdistrictCode": 820507,
     "subdistrictNameEn": "Khuek Khak",
     "subdistrictNameTh": "คึกคัก",
-    "postalCode": 82190
+    "postalCode": 82220
   },
   {
     "id": 6607,
@@ -59604,7 +59604,7 @@
     "subdistrictCode": 820806,
     "subdistrictNameEn": "Lam Kaen",
     "subdistrictNameTh": "ลำแก่น",
-    "postalCode": 82120
+    "postalCode": 82210
   },
   {
     "id": 6624,
@@ -59955,7 +59955,7 @@
     "subdistrictCode": 840211,
     "subdistrictNameEn": "Tha Uthae",
     "subdistrictNameTh": "ท่าอุแท",
-    "postalCode": 84160
+    "postalCode": 84340
   },
   {
     "id": 6663,
@@ -60099,7 +60099,7 @@
     "subdistrictCode": 840503,
     "subdistrictNameEn": "Ko Tao",
     "subdistrictNameTh": "เกาะเต่า",
-    "postalCode": 84280
+    "postalCode": 84360
   },
   {
     "id": 6679,
@@ -60124,7 +60124,7 @@
     "provinceCode": 84,
     "districtCode": 8406,
     "subdistrictCode": 840603,
-    "subdistrictNameEn": "Samet",
+    "subdistrictNameEn": "Lamet",
     "subdistrictNameTh": "เลม็ด",
     "postalCode": 84110
   },
@@ -60457,7 +60457,7 @@
     "provinceCode": 84,
     "districtCode": 8412,
     "subdistrictCode": 841201,
-    "subdistrictNameEn": "Na San ",
+    "subdistrictNameEn": "Na San",
     "subdistrictNameTh": "นาสาร",
     "postalCode": 84120
   },
@@ -60927,7 +60927,7 @@
     "subdistrictCode": 841901,
     "subdistrictNameEn": "Takuk Tai",
     "subdistrictNameTh": "ตะกุกใต้",
-    "postalCode": 84180
+    "postalCode": 84370
   },
   {
     "id": 6771,
@@ -60936,7 +60936,7 @@
     "subdistrictCode": 841902,
     "subdistrictNameEn": "Takuk Nuea",
     "subdistrictNameTh": "ตะกุกเหนือ",
-    "postalCode": 84180
+    "postalCode": 84370
   },
   {
     "id": 6772,
@@ -61323,7 +61323,7 @@
     "subdistrictCode": 860113,
     "subdistrictNameEn": "Khun Krathing",
     "subdistrictNameTh": "ขุนกระทิง",
-    "postalCode": 86000
+    "postalCode": 86190
   },
   {
     "id": 6815,
@@ -61942,7 +61942,7 @@
     "provinceCode": 90,
     "districtCode": 9002,
     "subdistrictCode": 900206,
-    "subdistrictNameEn": "Khlong Re",
+    "subdistrictNameEn": "Khlong Ri",
     "subdistrictNameTh": "คลองรี",
     "postalCode": 90190
   },
@@ -62140,7 +62140,7 @@
     "provinceCode": 90,
     "districtCode": 9004,
     "subdistrictCode": 900403,
-    "subdistrictNameEn": "Na Mosri",
+    "subdistrictNameEn": "Na Mo Si",
     "subdistrictNameTh": "นาหมอศรี",
     "postalCode": 90160
   },
@@ -62239,7 +62239,7 @@
     "provinceCode": 90,
     "districtCode": 9005,
     "subdistrictCode": 900504,
-    "subdistrictNameEn": "Lam Phli",
+    "subdistrictNameEn": "Lam Phlai",
     "subdistrictNameTh": "ลำไพล",
     "postalCode": 90260
   },
@@ -62250,7 +62250,7 @@
     "subdistrictCode": 900505,
     "subdistrictNameEn": "Tha Muang",
     "subdistrictNameTh": "ท่าม่วง",
-    "postalCode": 90260
+    "postalCode": 90150
   },
   {
     "id": 6918,
@@ -62529,7 +62529,7 @@
     "subdistrictCode": 900904,
     "subdistrictNameEn": "Khuan Ru",
     "subdistrictNameTh": "ควนรู",
-    "postalCode": 90180
+    "postalCode": 90220
   },
   {
     "id": 6949,
@@ -63085,7 +63085,7 @@
     "provinceCode": 91,
     "districtCode": 9101,
     "subdistrictCode": 910112,
-    "subdistrictNameEn": "Ketari",
+    "subdistrictNameEn": "Ket Tri",
     "subdistrictNameTh": "เกตรี",
     "postalCode": 91140
   },
@@ -64309,7 +64309,7 @@
     "provinceCode": 93,
     "districtCode": 9304,
     "subdistrictCode": 930401,
-    "subdistrictNameEn": "Mae Khri",
+    "subdistrictNameEn": "Mae Khari",
     "subdistrictNameTh": "แม่ขรี",
     "postalCode": 93160
   },
@@ -64318,7 +64318,7 @@
     "provinceCode": 93,
     "districtCode": 9304,
     "subdistrictCode": 930402,
-    "subdistrictNameEn": "Tanot",
+    "subdistrictNameEn": "Tamot",
     "subdistrictNameTh": "ตะโหมด",
     "postalCode": 93160
   },
@@ -64525,7 +64525,7 @@
     "provinceCode": 93,
     "districtCode": 9307,
     "subdistrictCode": 930703,
-    "subdistrictNameEn": "Tapaen",
+    "subdistrictNameEn": "Taphaen",
     "subdistrictNameTh": "ตะแพน",
     "postalCode": 93190
   },
@@ -64608,7 +64608,7 @@
     "subdistrictCode": 931001,
     "subdistrictNameEn": "Pa Phayom",
     "subdistrictNameTh": "ป่าพะยอม",
-    "postalCode": 93110
+    "postalCode": 93210
   },
   {
     "id": 7180,
@@ -64617,7 +64617,7 @@
     "subdistrictCode": 931002,
     "subdistrictNameEn": "Lan Khoi",
     "subdistrictNameTh": "ลานข่อย",
-    "postalCode": 93110
+    "postalCode": 93210
   },
   {
     "id": 7181,
@@ -64626,7 +64626,7 @@
     "subdistrictCode": 931003,
     "subdistrictNameEn": "Ko Tao",
     "subdistrictNameTh": "เกาะเต่า",
-    "postalCode": 93110
+    "postalCode": 93210
   },
   {
     "id": 7182,
@@ -64635,7 +64635,7 @@
     "subdistrictCode": 931004,
     "subdistrictNameEn": "Ban Phrao",
     "subdistrictNameTh": "บ้านพร้าว",
-    "postalCode": 93110
+    "postalCode": 93210
   },
   {
     "id": 7183,
@@ -65130,14 +65130,14 @@
     "subdistrictCode": 940504,
     "subdistrictNameEn": "Krawa",
     "subdistrictNameTh": "กระหวะ",
-    "postalCode": 94140
+    "postalCode": 94190
   },
   {
     "id": 7238,
     "provinceCode": 94,
     "districtCode": 9405,
     "subdistrictCode": 940505,
-    "subdistrictNameEn": "Lubo Yiri",
+    "subdistrictNameEn": "Luboyirai",
     "subdistrictNameTh": "ลุโบะยิไร",
     "postalCode": 94140
   },
@@ -65173,7 +65173,7 @@
     "provinceCode": 94,
     "districtCode": 9405,
     "subdistrictCode": 940509,
-    "subdistrictNameEn": "Podo",
+    "subdistrictNameEn": "Pado",
     "subdistrictNameTh": "ปะโด",
     "postalCode": 94140
   },
@@ -65731,7 +65731,7 @@
     "provinceCode": 95,
     "districtCode": 9501,
     "subdistrictCode": 950103,
-    "subdistrictNameEn": "Yopo",
+    "subdistrictNameEn": "Yupo",
     "subdistrictNameTh": "ยุโป",
     "postalCode": 95000
   },
@@ -66091,7 +66091,7 @@
     "provinceCode": 95,
     "districtCode": 9506,
     "subdistrictCode": 950607,
-    "subdistrictNameEn": "Cha Kwua",
+    "subdistrictNameEn": "Cha-Kwa",
     "subdistrictNameTh": "จะกว๊ะ",
     "postalCode": 95140
   },
@@ -66208,7 +66208,7 @@
     "provinceCode": 95,
     "districtCode": 9508,
     "subdistrictCode": 950802,
-    "subdistrictNameEn": "Sa-Ae",
+    "subdistrictNameEn": "Sa-E",
     "subdistrictNameTh": "สะเอะ",
     "postalCode": 95000
   },

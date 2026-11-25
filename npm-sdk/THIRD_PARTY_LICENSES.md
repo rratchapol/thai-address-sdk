@@ -2,7 +2,7 @@
 
 The bundled Thailand geography dataset is sourced from
 [`thailand-geography-data/thailand-geography-json`](https://github.com/thailand-geography-data/thailand-geography-json)
-at commit `b8b3fb91c7df1129ff5b43cb46f7fcffadd2156b`.
+at commit `8ab310834e70d00f3be21b938ae6b65fe3363d89`.
 
 MIT License
 
